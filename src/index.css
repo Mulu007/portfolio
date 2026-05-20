@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --paper: #0b1728;
+    --ink:   #dbeafe;
+    --gold:  #38bdf8;
+    --navy:  #67e8f9;
+    --rule:  rgba(56,189,248,0.18);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    @apply bg-paper text-ink font-serif overflow-x-hidden;
+  }
+
+  * { box-sizing: border-box; }
+
+  ::selection { background: rgba(56,189,248,0.25); color: #dbeafe; }
+
+  ::-webkit-scrollbar       { width: 5px; }
+  ::-webkit-scrollbar-track { background: #0b1728; }
+  ::-webkit-scrollbar-thumb { background: #163350; border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+
+  h1, h2, h3 { @apply font-display text-ink; }
+}
+
+@layer components {
+
+  /* ── Blueprint card ─────────────────────────────── */
+  .paper-card {
+    @apply relative bg-paper-dark rounded-sm;
+    border: 1px solid rgba(56,189,248,0.18);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(56,189,248,0.06);
+  }
+
+  /* ── Section rule — blueprint dimension line ────── */
+  .section-rule {
+    @apply flex items-center gap-4 my-10;
+  }
+  .section-rule::before,
+  .section-rule::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(56,189,248,0.30), transparent);
+  }
+
+  /* ── Abstract / drawing title block ────────────── */
+  .abstract-box {
+    @apply rounded-sm p-6 md:p-8;
+    background: #0d1e38;
+    border: 1px solid rgba(56,189,248,0.25);
+    box-shadow: 0 0 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(56,189,248,0.08);
+  }
+
+  /* ── Equation box ──────────────────────────────── */
+  .equation-box {
+    @apply font-mono text-sm rounded-sm px-4 py-3;
+    color: #67e8f9;
+    background: rgba(56,189,248,0.06);
+    border: 1px solid rgba(56,189,248,0.22);
+    box-shadow: 0 0 16px rgba(56,189,248,0.08);
+    letter-spacing: 0.02em;
+  }
+
+  /* ── Tags ──────────────────────────────────────── */
+  .tag {
+    @apply text-xs font-mono px-2 py-0.5 rounded-sm border font-medium;
+  }
+  .tag-gold    { @apply tag; color: #7dd3fc; border-color: rgba(56,189,248,0.30);  background: rgba(56,189,248,0.08); }
+  .tag-navy    { @apply tag; color: #a5f3fc; border-color: rgba(103,232,249,0.30); background: rgba(103,232,249,0.08); }
+  .tag-rust    { @apply tag; color: #a5b4fc; border-color: rgba(129,140,248,0.30); background: rgba(129,140,248,0.08); }
+  .tag-default { @apply tag; color: #7ea8c9; border-color: rgba(56,189,248,0.15);  background: rgba(56,189,248,0.05); }
+
+  /* ── Buttons ───────────────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-sm font-mono font-semibold
+           transition-all duration-200;
+    color: #0b1728;
+    background: #38bdf8;
+    box-shadow: 0 0 20px rgba(56,189,248,0.25);
+  }
+  .btn-primary:hover  { background: #7dd3fc; box-shadow: 0 0 32px rgba(56,189,248,0.45); transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-sm font-mono font-semibold
+           transition-all duration-200;
+    color: #7ea8c9;
+    border: 1px solid rgba(56,189,248,0.25);
+    background: rgba(56,189,248,0.05);
+  }
+  .btn-ghost:hover  { color: #38bdf8; border-color: rgba(56,189,248,0.55); box-shadow: 0 0 16px rgba(56,189,248,0.15); transform: translateY(-1px); }
+  .btn-ghost:active { transform: translateY(0); }
+
+  /* ── Section heading — blueprint annotation ─────── */
+  .section-heading {
+    @apply font-mono text-xs font-bold uppercase tracking-widest;
+    color: #38bdf8;
+  }
+
+  /* ── Citation badge ────────────────────────────── */
+  .cite-num {
+    @apply font-mono text-xs font-bold rounded-sm px-1.5 py-0.5 flex-shrink-0;
+    color: #38bdf8;
+    border: 1px solid rgba(56,189,248,0.35);
+    background: rgba(56,189,248,0.08);
+  }
+
+  /* ── Gradient text (cyan) ──────────────────────── */
+  .gradient-text-gold {
+    background: linear-gradient(90deg, #38bdf8, #67e8f9, #818cf8, #38bdf8);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientX 5s linear infinite;
+  }
+}
+
+/* ── Cursor ring ──────────────────────────────────── */
+.cursor-ring {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(56,189,248,0.6);
+  transition: width .18s ease, height .18s ease, opacity .2s ease, border-color .2s ease;
+  transform: translate(-50%,-50%);
+  will-change: transform;
+}
+.cursor-ring.grow {
+  width: 44px;
+  height: 44px;
+  border-color: rgba(103,232,249,0.7);
+  box-shadow: 0 0 12px rgba(56,189,248,0.3);
+}
+
+/* ── Burst dot ────────────────────────────────────── */
+.burst-dot {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%,-50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-ring { display: none !important; }
+  .gradient-text-gold { animation: none !important; -webkit-text-fill-color: #38bdf8 !important; }
+}
