@@ -29,6 +29,7 @@ export interface Certification {
   year: string
   credential?: string
   pdf?: string
+  status?: 'in-progress'
 }
 
 export const education: Education[] = [
@@ -99,5 +100,7 @@ export const certifications: Certification[] = [
   { name: 'Data Analytics', issuer: 'Moringa', year: '2025', pdf: '/certificates/moringa-data-analytics.pdf' },
   { name: 'Full Stack Software Engineering', issuer: 'Moringa', year: '2024', pdf: '/certificates/moringa-fullstack.pdf' },
   { name: 'Quantum Quest — Quantum Computing', issuer: 'University of Amsterdam, QuSoft & Ruhr University Bochum', year: '2023', pdf: '/certificates/quantum-quest.pdf' },
+  { name: 'Securities Industry Essentials (SIE)', issuer: 'FINRA', year: '2025', status: 'in-progress' },
+
   // { name: 'Bloomberg Market Concepts', issuer: 'Bloomberg', year: '2024' },
 ]

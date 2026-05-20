@@ -197,7 +197,15 @@ export default function Experience() {
           {certifications.map((cert, i) => (
             <ScrollReveal key={cert.name} delay={i * 0.05}>
               <PaperCard className="p-5" tilt={false}>
-                <p className="font-display font-bold text-ink mb-1">{cert.name}</p>
+                <div className="flex items-start justify-between gap-2 mb-1">
+                  <p className="font-display font-bold text-ink">{cert.name}</p>
+                  {cert.status === 'in-progress' && (
+                    <span className="shrink-0 font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm"
+                      style={{ color: '#f59e0b', background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.3)' }}>
+                      In Progress
+                    </span>
+                  )}
+                </div>
                 <p className="font-mono text-xs text-gold-dark mb-1">{cert.issuer}</p>
                 <div className="flex items-center justify-between mt-2">
                   <p className="font-mono text-xs text-ink-faint">{cert.year}</p>
