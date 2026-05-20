@@ -9,6 +9,7 @@ export interface Award {
   category: AwardCategory
   highlight?: string
   image?: string   // place photos in public/awards/ e.g. /awards/mit-hackathon.jpg
+  link?: string
 }
 
 export const awards: Award[] = [
@@ -81,6 +82,16 @@ export const awards: Award[] = [
     category: "competition",
     highlight: "National Ranking",
     // image: '/awards/table-tennis.jpg',
+  },
+  {
+    id: 9,
+    title: "Thank You Note Speaker — Year Group Address",
+    org: "Waterford Kamhlaba United World College of Southern Africa",
+    year: "2024",
+    description: "Selected by faculty to deliver the official thank you address on behalf of the graduating year group at Waterford Kamhlaba UWC.",
+    category: "recognition",
+    highlight: "Faculty Selected",
+    link: 'https://www.youtube.com/watch?v=44ONYABRzKk&t=6648s',
   },
   {
     id: 8,

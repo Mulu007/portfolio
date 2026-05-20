@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Trophy, Star, BookOpen, Users } from 'lucide-react'
+import { Trophy, Star, BookOpen, Users, ArrowUpRight } from 'lucide-react'
 import { awards, categoryMeta, type AwardCategory } from '../data/awards'
 import ScrollReveal from '../components/ui/ScrollReveal'
 import PaperCard from '../components/ui/GlassCard'
@@ -148,6 +148,16 @@ export default function Awards() {
                     <div className="h-px my-2" style={{ background: 'rgba(56,189,248,0.10)' }} />
 
                     <p className="text-ink-muted text-sm leading-relaxed">{award.description}</p>
+                    {award.link && (
+                      <a
+                        href={award.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 font-mono text-xs text-navy hover:text-navy-light transition-colors mt-2"
+                      >
+                        <ArrowUpRight size={11} /> View
+                      </a>
+                    )}
                   </div>
                 </div>
 
