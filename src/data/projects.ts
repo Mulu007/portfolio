@@ -1,4 +1,4 @@
-export type ProjectCategory = 'algo-trading' | 'ml' | 'statistics' | 'finance' | 'economics' | 'software' | 'research'
+export type ProjectCategory = 'algo-trading' | 'ml' | 'statistics' | 'finance' | 'economics' | 'software' | 'research' | 'data-analytics'
 
 export interface Project {
   id: string
@@ -174,16 +174,45 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    id: 'globalmart-powerbi',
+    title: 'GlobalMart Sales Analysis: Power BI Dashboard & Relational Data Modeling',
+    description:
+      'Moringa School — Data Analytics.\nDesigned an end-to-end analytics pipeline in Power BI to identify growth opportunities and diagnose profitability challenges across GlobalMart\'s 2022–2024 U.S. retail operations. After cleaning and standardizing a 337-transaction dataset in Excel, I normalized the flat file into a star schema with three dimension tables (Product, Region, Date), authored eight DAX measures including Year-over-Year revenue growth and shipping duration, and built four interactive reports covering executive summary, sales trends, order detail, and regional performance.',
+    tags: ['Power BI', 'DAX', 'Star Schema', 'Data Cleaning', 'Business Analytics', 'Excel'],
+    metric: { label: 'Transactions', value: '337' },
+    demo: '/papers/globalmart-powerbi.pdf',
+    category: 'data-analytics',
+    findings: [
+      {
+        label: 'Anomalous Margin Spike',
+        text: 'Identified a single December 2023 transaction responsible for a 12,028% profit margin spike that masked an underlying net loss for the year — flagging a structural reporting vulnerability.',
+      },
+      {
+        label: 'Category Concentration Risk',
+        text: 'Office Supplies accounts for over 70% of revenue while Technology contributes just 6.07%, despite being the highest unit-value category — signalling a significant revenue diversification gap.',
+      },
+      {
+        label: 'Volume-Value Mismatch in Michigan',
+        text: 'Michigan leads in unit volume but aggressive discounting suppresses revenue well below Ohio, which leads in gross revenue while maintaining the lowest average discount rate.',
+      },
+      {
+        label: 'Dual-Path Date Filtering',
+        text: 'Configured dual-path date filtering via USERELATIONSHIP to independently track order and shipping timelines, enabling logistics performance analysis alongside sales trends.',
+      },
+    ],
+  },
 ]
 
 export const categoryLabels: Record<ProjectCategory, string> = {
-  'algo-trading': 'Algo Trading',
-  'ml':           'Machine Learning',
-  'statistics':   'Statistics',
-  'finance':      'Finance',
-  'economics':    'Economics',
-  'software':     'Software',
-  'research':     'Research',
+  'algo-trading':   'Algo Trading',
+  'ml':             'Machine Learning',
+  'statistics':     'Statistics',
+  'finance':        'Finance',
+  'economics':      'Economics',
+  'software':       'Software',
+  'research':       'Research',
+  'data-analytics': 'Data Analytics',
 }
 
 export const tagColorMap: Record<string, string> = {

@@ -13,10 +13,12 @@ const toSrc = (path: string) =>
     : `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
 
 const FILTERS: { value: 'all' | ProjectCategory | 'ib'; label: string }[] = [
-  { value: 'all',          label: 'All' },
-  { value: 'economics',    label: 'Economics' },
-  { value: 'software',     label: 'Software-Engineering' },
-  { value: 'ib',           label: 'IB' },
+  { value: 'all',            label: 'All' },
+  { value: 'economics',      label: 'Economics' },
+  { value: 'software',       label: 'Software Engineering' },
+  { value: 'data-analytics', label: 'Data Analytics' },
+  { value: 'research',       label: 'Research' },
+  { value: 'ib',             label: 'IB' },
 ]
 
 const pageVariants = {
