@@ -20,10 +20,7 @@ const KEYWORDS = [
   'Numerical Optmisation',
   'Applied Calculus',
   'Market Analysis',
-  'Quantitative Analysis'
-  // 'Factor Models', 'Options Pricing', 'Econometrics',
-  // 'Time Series', 'ML Alpha', 'Portfolio Optimization',
-  // 'Stochastic Calculus', 'Backtesting',
+  'Quantitative Analysis',
 ]
 
 function Typewriter() {

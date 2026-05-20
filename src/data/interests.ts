@@ -34,16 +34,22 @@ export const skills: Skill[] = [
   { name: 'PyTorch',      level: 3, category: 'lib', color: '#a5b4fc' },
   { name: 'cvxpy',        level: 3, category: 'lib', color: '#38bdf8' },
   { name: 'ggplot2',      level: 5, category: 'lib', color: '#67e8f9' },
+  { name: 'tidyverse',    level: 4, category: 'lib', color: '#67e8f9' },
+  { name: 'dplyr',        level: 4, category: 'lib', color: '#a5f3fc' },
+  { name: 'React.js',     level: 4, category: 'lib', color: '#38bdf8' },
   // Tools
   { name: 'Git',       level: 4, category: 'tool', color: '#818cf8' },
   { name: 'Jupyter',   level: 5, category: 'tool', color: '#38bdf8' },
   { name: 'Stata',     level: 4, category: 'tool', color: '#67e8f9' },
   { name: 'Bloomberg', level: 2, category: 'tool', color: '#a5f3fc' },
+  { name: 'Power BI',  level: 4, category: 'tool', color: '#f59e0b' },
+  { name: 'Excel',     level: 5, category: 'tool', color: '#67e8f9' },
   // Finance concepts
-  { name: 'Derivatives',      level: 4, category: 'finance', color: '#38bdf8' },
-  { name: 'Time Series',      level: 4, category: 'finance', color: '#67e8f9' },
-  { name: 'Bonds',            level: 4, category: 'finance', color: '#a5f3fc' },
-  { name: 'Macro/Micro Theory',    level: 5, category: 'finance', color: '#818cf8' },
+  { name: 'Derivatives',       level: 4, category: 'finance', color: '#38bdf8' },
+  { name: 'Time Series',       level: 4, category: 'finance', color: '#67e8f9' },
+  { name: 'Fixed Income',      level: 4, category: 'finance', color: '#a5f3fc' },
+  { name: 'Bonds',             level: 4, category: 'finance', color: '#a5f3fc' },
+  { name: 'Macro/Micro Theory',level: 5, category: 'finance', color: '#818cf8' },
 ]
 
 export const books: Book[] = [

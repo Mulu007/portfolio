@@ -3,10 +3,11 @@ import { NavLink } from 'react-router-dom'
 import { Menu, X, FileText, Mail, Code2, Briefcase } from 'lucide-react'
 
 const NAV = [
-  { to: '/',          label: 'Home',      section: '§1' },
-  { to: '/projects',  label: 'Projects',  section: '§2' },
-  { to: '/awards',    label: 'Awards',    section: '§3' },
-  { to: '/interests', label: 'Interests', section: '§4' },
+  { to: '/',           label: 'Home',       section: '§1' },
+  { to: '/projects',   label: 'Projects',   section: '§2' },
+  { to: '/awards',     label: 'Awards',     section: '§3' },
+  { to: '/interests',  label: 'Interests',  section: '§4' },
+  { to: '/experience', label: 'Experience', section: '§5' },
 ]
 
 const LINKS = [

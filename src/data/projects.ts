@@ -9,6 +9,7 @@ export interface Project {
   equation?: string
   github?: string
   demo?: string
+  pdf?: string
   category: ProjectCategory
   featured?: boolean
   ib?: boolean          // International Baccalaureate work
@@ -181,7 +182,8 @@ export const projects: Project[] = [
       'Moringa School — Data Analytics.\nDesigned an end-to-end analytics pipeline in Power BI to identify growth opportunities and diagnose profitability challenges across GlobalMart\'s 2022–2024 U.S. retail operations. After cleaning and standardizing a 337-transaction dataset in Excel, I normalized the flat file into a star schema with three dimension tables (Product, Region, Date), authored eight DAX measures including Year-over-Year revenue growth and shipping duration, and built four interactive reports covering executive summary, sales trends, order detail, and regional performance.',
     tags: ['Power BI', 'DAX', 'Star Schema', 'Data Cleaning', 'Business Analytics', 'Excel'],
     metric: { label: 'Transactions', value: '337' },
-    demo: '/papers/globalmart-powerbi.pdf',
+    demo: 'https://app.powerbi.com/groups/me/reports/74115611-0e81-4049-819b-8e63a72108b4/e47ef18be9bec4e94771?experience=power-bi',
+    pdf: '/papers/globalmart-powerbi.pdf',
     category: 'data-analytics',
     findings: [
       {
@@ -229,10 +231,21 @@ export const tagColorMap: Record<string, string> = {
   JavaScript:    'gold',
   'Node.js':     'jade',
   React:         'electric',
-  Ruby:          'rose',
-  Tailwind:      'electric',
-  'REST API':    'violet',
-  Auth:          'violet',
-  'Fetch API':   'jade',
-  Automation:    'gold',
+  Ruby:             'rose',
+  Tailwind:         'electric',
+  'REST API':       'violet',
+  Auth:             'violet',
+  'Fetch API':      'jade',
+  Automation:       'gold',
+  'React.js':       'electric',
+  'Ruby on Rails':  'rose',
+  'Tailwind CSS':   'electric',
+  tidyverse:        'jade',
+  ggplot2:          'jade',
+  dplyr:            'jade',
+  'Power BI':       'gold',
+  DAX:              'gold',
+  Excel:            'jade',
+  'Star Schema':    'violet',
+  'Fixed Income':   'electric',
 }
