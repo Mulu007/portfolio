@@ -60,26 +60,26 @@ export const books: Book[] = [
 export const interests: Interest[] = [
   {
     label: 'Running',
-    icon: '🏃',
-    description: 'Long-distance running is my reset button. There is something about running with no music that mirrors the pulse of a market; loud and control.',
+    icon: '',
+    description: 'Long-distance running is my reset button. No music, no distractions, just the road and whatever problem I was pretending not to think about. Something about sustained physical discomfort at 6am builds the same tolerance you need when a position moves against you.',
     image: '/interests/running.jpg',   // add your photo here
   },
   {
     label: 'Checkers',
-    icon: '♟',
-    description: 'Strategy games sharpen the mind. Picked up checkers whilst playing Assassin\'s Creed IV: Black Flag and alwsys played Expert Level and since then I have loved the game.',
+    icon: '',
+    description: 'Most people learn checkers as children and forget it exists. I discovered it through Assassin\'s Creed IV: Black Flag, went straight to Expert and have refused to play anything lower since. A pirate game accidentally gave me a strategy obsession',
     image: 'https://i.ytimg.com/vi/aRizDiH-cuQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCeXDPefQDkv4uv02vX3oWvQAks0g',
   },
   {
     label: 'Farming · 300 Chickens',
-    icon: '🐔',
-    description: 'A farmer at heart. Managing 300 chickens is a daily exercise in resource allocation, risk management, and patience — closer to economics than most people realise.',
+    icon: '',
+    description: 'A farmer at heart. Daily feed schedules, mortality risk, supply chain logistics, margin optimization: it is essentially a small enterprise that occasionally tries to escape. Closer to a portfolio management problem than most people would expect.',
     image: '/interests/farm.jpg',      // add your farm photo here
   },
   {
     label: 'My Cats & Dog',
-    icon: '🐾',
-    description: 'Three cats and one dog. Each with a completely distinct personality. They are living proof animal behaviour is more predictable that human behaviour.',
+    icon: '',
+    description: 'Three cats and one dog each with a completely distinct personality and zero interest in coordinating with each other. Genuinely the most useful behavioral economics case study I have access to - at least their incentives are transparent.',
     image: '/interests/pets.jpg',      // add your pets photo here
   },
   // {
