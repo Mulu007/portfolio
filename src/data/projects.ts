@@ -19,6 +19,30 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'tea-plantations-ra',
+    title: 'Research Assistantship: Tea Plantations & Local Economic Outcomes',
+    description:
+      'Texas State University — Department of Economics | Spring 2026 – Present.\n Supporting faculty research on the economic impact of tea plantations and factories in Kenya. Addressing fragmented location data, I built a Python pipeline using the Google Geocoding API to convert physical factory addresses into precise GPS coordinates, forming the empirical base for econometric modelling of regional employment, wealth, and infrastructure outcomes.',
+    tags: ['Economic Research', 'Python', 'Geospatial Analytics', 'Econometrics', 'API Data Ingestion'],
+    metric: { label: 'Status', value: 'Publishing in process' },
+    category: 'economics',
+    featured: true,
+    findings: [
+      {
+        label: 'Female labour and household welfare channel',
+        text: 'Since tea harvesting disproportionately employs women (due to the physical advantage shorter stature offers in plucking), and evidence suggests women allocate a greater share of income toward household welfare than men, the research examines whether proximity to tea factories improves living standards through female labor force participation.',
+      },
+      {
+        label: 'Geocoding Pipeline',
+        text: 'Built a Python pipeline that automated address-to-coordinate conversion across the dataset using the Google Geocoding API, eliminating manual lookup and accelerating the research timeline.',
+      },
+      {
+        label: 'Data Consolidation',
+        text: 'Consolidating factory-level data with regional macroeconomic variables under strict cleaning protocols ahead of regression analysis.',
+      },
+    ],
+  },
+  {
     id: 'piecewise-interpolation-engine',
     title: 'Piecewise Interpolation Engine for Non-Linear Decay Systems',
     description:
@@ -60,14 +84,32 @@ export const projects: Project[] = [
   },
   {
     id: 'allmovies',
-    title: 'AllMovies — Full-Stack Web App',
+    title: 'ALLMOVIES: Crowd-Sourced Movie Curation Platform',
     description:
-      'Collaborative full-stack movie platform built with React and Ruby. Users can browse, add, edit and delete movies, and authenticate via login/signup. Developed in an agile team of four with structured standups, Git-based code reviews, and shared pull request ownership.',
-    tags: ['React', 'Ruby', 'Tailwind', 'JSX', 'REST API', 'Auth'],
-    metric: { label: 'Team size', value: '4 devs' },
-    github: 'https://github.com/Mulu007',
+      'ALLMOVIES is a responsive, full-stack web application designed for movie enthusiasts to crowd-source and manage binge-watch collections. The platform pairs a component-driven React frontend with a Ruby on Rails backend. Despite a 50% reduction in active team headcount mid-sprint, Another teammate and I successfully delivered the application under strict deadlines delivering the best project. The frontend handles full state management for secure user authentication and dynamic content management, ensuring a fluid user experience across all browsing, editing and routing layers.',
+    tags: ['React.js', 'Ruby on Rails', 'Tailwind CSS', 'Auth', 'CRUD', 'Agile', 'Git'],
+    metric: { label: 'Team', value: '4 → 2 devs' },
+    github: 'https://github.com/Mulu007/phase-4-frontend',
     category: 'software',
     featured: true,
+    findings: [
+      {
+        label: 'Active Project Resource Management',
+        text: 'Adapted quickly to sudden team downsizing by taking full ownership of the frontend architecture, collaborating closely with one backend partner through daily standups to meet all delivery deadlines.',
+      },
+      {
+        label: 'Full CRUD Interaction Lifecycle',
+        text: 'Engineered a seamless interface using React components to let users dynamically create, read, update and delete movie data directly from the view layers.',
+      },
+      {
+        label: 'Secure Client-Side Authentication',
+        text: 'Implemented interactive form handling and conditional state logic to process secure user login, registration sessions and custom account creation states.',
+      },
+      {
+        label: 'Cross-Environment Version Patching',
+        text: 'Isolated and resolved breaking Git conflicts and configuration errors caused by mismatched local Ruby development environments, enforcing strict peer review requirements for all pull requests.',
+      },
+    ],
   },
   {
     id: 'dust-solar-pv',
@@ -109,25 +151,28 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'solar-angle-efficiency',
-    title: 'Angle of Inclination vs Solar Panel Efficiency',
-    description:
-      'Physics investigation optimising the angle of a solar panel relative to incident light to maximise electrical output. Collected power output data across angles, identified the optimal inclination, and modelled the relationship — a real-world optimisation problem analogous to parameter tuning in quantitative models.',
-    tags: ['Experimental Physics', 'Optimisation', 'Data Collection', 'Energy'],
-    metric: { label: 'Type', value: 'Physics IA' },
-    demo: '/papers/solar-angle-efficiency.pdf',
-    category: 'research',
-    ib: true,
-  },
-  {
     id: 'image-downloader',
-    title: 'Automated Image Scraper',
+    title: 'Asynchronous Media Scraping Engine: Automated Asset Extraction Pipeline',
     description:
-      'Browser-based JavaScript script that automates batch downloading of sequentially numbered image files from a URL pattern. Uses the Fetch API to retrieve binary blobs and programmatically triggers downloads — demonstrating web automation, binary data handling, and efficient loop design.',
-    tags: ['JavaScript', 'Fetch API', 'Automation', 'Browser'],
-    metric: { label: 'Images', value: '656 files' },
-    github: 'https://github.com/Mulu007',
+      'Manual extraction of paginated digital textbook assets presents a severe operational bottleneck, requiring an estimated 2.7 hours of repetitive manual data entry. To eliminate this friction, I engineered an asynchronous JavaScript asset extraction pipeline that fully automates the process, reducing operational latency to a 30-second execution run. By reverse-engineering the platform\'s CDN URL structure and identifying an incremental string-padding pattern (F01_IB_CHEM_SL_27690-XXX.jpg), the engine concurrently streams all 656 assets as Binary Large Objects (Blobs), programmatically serializing and archiving the complete textbook database on the client side with 100% manual intervention reduction.',
+    tags: ['JavaScript', 'Fetch API', 'Async/Await', 'CDN Reverse Engineering', 'Automation', 'Browser'],
+    metric: { label: 'Time saved', value: '2.7 hrs → 30 s' },
+    github: 'https://github.com/Mulu007/Textbook-Image-Downloader',
     category: 'software',
+    findings: [
+      {
+        label: 'Massive Throughput Acceleration',
+        text: 'Replaced manual, single-threaded downloading with a promise-based asynchronous architecture, scaling transmission velocity from a human limit of ≈ 0.06 Hz to an algorithmic throughput of 20+ images per second.',
+      },
+      {
+        label: 'Zero-Friction Asset Serialization',
+        text: 'Eradicated 656 distinct manual checkpoints by utilizing automated string padding (.padStart(3, "0")) to enforce absolute uniformity across the downloaded dataset and eliminate naming errors.',
+      },
+      {
+        label: 'Optimized Resource Allocation',
+        text: 'Decoupling asset retrieval from user-interface interaction allows compilation of entire educational databases with zero human capital expenditure, demonstrating the power of edge-side scripting.',
+      },
+    ],
   },
 ]
 

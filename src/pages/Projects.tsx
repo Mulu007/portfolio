@@ -14,11 +14,8 @@ const toSrc = (path: string) =>
 
 const FILTERS: { value: 'all' | ProjectCategory | 'ib'; label: string }[] = [
   { value: 'all',          label: 'All' },
-  { value: 'algo-trading', label: 'Algo Trading' },
-  { value: 'ml',           label: 'Machine Learning' },
-  { value: 'finance',      label: 'Finance' },
   { value: 'economics',    label: 'Economics' },
-  { value: 'software',     label: 'Software' },
+  { value: 'software',     label: 'Software-Engineering' },
   { value: 'ib',           label: 'IB' },
 ]
 
@@ -43,8 +40,8 @@ export default function Projects() {
         <p className="font-mono text-xs text-ink-faint uppercase tracking-widest mb-2">§2</p>
         <h1 className="font-display text-4xl font-bold text-ink mb-2">Projects & Research</h1>
         <p className="text-ink-muted leading-relaxed mb-8">
-          Quantitative research, algorithmic strategies, and financial modeling.
-          Each project includes the core methodology, key results, and a link to source code.
+          Here is some of the work I have done.
+          Each project includes the core methodology, key results and a link to source code.
         </p>
       </ScrollReveal>
 
@@ -110,7 +107,7 @@ export default function Projects() {
                     <div className="h-px bg-rule my-3" />
 
                     {/* Description */}
-                    <p className="text-ink-muted text-sm leading-relaxed mb-3">{p.description}</p>
+                    <p className="text-ink-muted text-sm leading-relaxed mb-3 whitespace-pre-line">{p.description}</p>
 
                     {/* Piecewise system (rendered KaTeX) */}
                     {p.piecewiseEquations && (

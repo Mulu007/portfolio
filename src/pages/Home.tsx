@@ -7,11 +7,11 @@ import PaperCard from '../components/ui/GlassCard'
 import { projects } from '../data/projects'
 
 const ROLES = [
-  'Apiring Macro Mind',
+  'Macro-Economist Enthusiast',
   'Global News Addict',
   // 'Backyard Chicken Farmer',
   // 'Professional Pet Pamperer',
-  'Efficiency Optmiser',
+  'Decision Optmiser',
 ]
 
 const KEYWORDS = [
@@ -130,9 +130,9 @@ export default function Home() {
               I am an Economics and Mathematics undergraduate driven by the idea that global events share an underlying, synchronized pattern. 
               Currently, I am authoring research papers focused on               {' '}
               <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
-                Var/sVar
+                VaR/sVaR
               </span>{' '}
-              economic models, while separately learning and leveraging time series analysis to study stock market dynamics. 
+              economic models while learning how to leverage time-series analysis to study stock market dynamics. 
               I love translating these interconnected global events into rigorous mathematical frameworks. 
               Looking ahead, I am building the foundations to transition into               {' '}
               <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
@@ -214,9 +214,12 @@ export default function Home() {
                     )}
                   </div>
                   <p className="text-ink-muted text-sm leading-relaxed mb-3">{p.description}</p>
-                  {p.equation && (
-                    <div className="equation-box text-xs mb-3 inline-block">{p.equation}</div>
-                  )}
+                  <Link
+                    to="/projects"
+                    className="inline-flex items-center gap-1 font-mono text-xs text-gold-dark hover:text-gold transition-colors mb-3"
+                  >
+                    Click here to read more <ArrowRight size={11} />
+                  </Link>
                   <div className="flex flex-wrap gap-1.5">
                     {p.tags.map(t => <span key={t} className="tag-default">{t}</span>)}
                   </div>

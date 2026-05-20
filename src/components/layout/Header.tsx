@@ -10,9 +10,9 @@ const NAV = [
 ]
 
 const LINKS = [
-  { href: 'https://linkedin.com/in/yourprofile', icon: Briefcase, label: 'LinkedIn' },
-  { href: 'https://github.com/yourusername',     icon: Code2,     label: 'GitHub'   },
-  { href: 'mailto:your@email.edu',               icon: Mail,      label: 'Email'    },
+  { href: 'https://www.linkedin.com/in/silvanius/', icon: Briefcase, label: 'LinkedIn' },
+  { href: 'https://github.com/Mulu007',     icon: Code2,     label: 'GitHub'   },
+  { href: 'mailto:uvb20@txstate.edu',               icon: Mail,      label: 'Email'    },
   { href: '/resume.pdf',                         icon: FileText,  label: 'Resume'   },
 ]
 

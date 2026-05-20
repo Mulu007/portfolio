@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { BookOpen, Trophy, Wrench } from 'lucide-react'
-import { skills, books, interests, competitions } from '../data/interests'
+import { Trophy, Wrench } from 'lucide-react'
+import { skills, interests, competitions } from '../data/interests'
 import ScrollReveal from '../components/ui/ScrollReveal'
 import PaperCard from '../components/ui/GlassCard'
 
@@ -86,28 +86,6 @@ export default function Interests() {
             </ScrollReveal>
           )
         })}
-      </div>
-
-      {/* ── Reading list ────────────────────────────── */}
-      <div className="section-rule">
-        <div className="flex items-center gap-2 shrink-0">
-          <BookOpen size={15} className="text-gold" />
-          <span className="section-heading">Bibliography</span>
-        </div>
-      </div>
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
-        {books.map((book, i) => (
-          <ScrollReveal key={book.title} delay={i * 0.05}>
-            <PaperCard className="p-4 h-full flex flex-col" tilt={false}>
-              <span className="tag-gold self-start mb-3">{book.tag}</span>
-              <p className="font-display font-bold text-sm text-ink leading-snug flex-1">
-                {book.title}
-              </p>
-              <p className="font-mono text-xs text-ink-faint mt-2">{book.author}</p>
-            </PaperCard>
-          </ScrollReveal>
-        ))}
       </div>
 
       {/* ── Competitions ────────────────────────────── */}
