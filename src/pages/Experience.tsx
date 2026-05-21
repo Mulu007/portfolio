@@ -8,6 +8,31 @@ const toSrc = (path: string) =>
   path.startsWith('http') ? path
     : `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
 
+function Logo({ src, name }: { src?: string; name: string }) {
+  if (src) {
+    return (
+      <div
+        className="h-19 shrink-0 flex items-center justify-center rounded-sm"
+        style={{ minWidth: '3.5rem', maxWidth: '7rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(56,189,248,0.15)', padding: '6px' }}
+      >
+        <img
+          src={toSrc(src)}
+          alt={name}
+          className="h-full w-auto max-w-full object-contain"
+        />
+      </div>
+    )
+  }
+  return (
+    <div
+      className="w-14 h-14 rounded-sm flex items-center justify-center shrink-0 font-display font-bold text-xl"
+      style={{ background: 'rgba(56,189,248,0.08)', border: '1px solid rgba(56,189,248,0.18)', color: '#38bdf8' }}
+    >
+      {name.charAt(0)}
+    </div>
+  )
+}
+
 const pageVariants = {
   initial: { opacity: 0, y: 16 },
   enter:   { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -42,7 +67,7 @@ export default function Experience() {
           <ScrollReveal key={edu.institution} delay={i * 0.06}>
             <PaperCard className="p-6" accent="#38bdf8">
               <div className="flex items-start gap-4">
-                <span className="cite-num mt-0.5">[{i + 1}]</span>
+                <Logo src={edu.logo} name={edu.institution} />
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-3 flex-wrap mb-1">
                     <div>
@@ -91,7 +116,7 @@ export default function Experience() {
           <ScrollReveal key={job.role + job.org} delay={i * 0.06}>
             <PaperCard className="p-6" accent="#38bdf8">
               <div className="flex items-start gap-4">
-                <span className="cite-num mt-0.5">[{i + 1}]</span>
+                <Logo src={job.logo} name={job.org} />
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-3 flex-wrap mb-1">
                     <div>
@@ -141,7 +166,7 @@ export default function Experience() {
           <ScrollReveal key={job.role + job.org} delay={i * 0.06}>
             <PaperCard className="p-6" accent="#38bdf8">
               <div className="flex items-start gap-4">
-                <span className="cite-num mt-0.5">[{i + 1}]</span>
+                <Logo src={job.logo} name={job.org} />
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-3 flex-wrap mb-1">
                     <div>
