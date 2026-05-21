@@ -110,7 +110,7 @@ export default function Home() {
 
           <motion.p variants={journeyItem} className="font-mono text-sm text-ink-muted mb-4">
             Department of Economics ·{' '}
-            <span className="text-navy">B.A. Economics, Minor in Mathematics</span>
+            <span className="text-navy">B.A. Economics (Honors), Minor in Mathematics</span>
           </motion.p>
 
           {/* Typewriter */}

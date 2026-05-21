@@ -308,7 +308,7 @@ export default function IntroScreen({ onEnter }: Props) {
         >
           {[
             { label: 'Interest', value: 'Research'       },
-            { label: 'Degree',   value: 'B.A. Economics' },
+            { label: 'Degree',   value: 'B.A. Economics (Honors)' },
             { label: 'Minor',    value: 'Mathematics'    },
           ].map(s => (
             <div key={s.label}>

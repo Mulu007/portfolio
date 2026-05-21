@@ -37,7 +37,7 @@ export interface Certification {
 export const education: Education[] = [
   {
     institution: 'Texas State University',
-    degree: 'B.A. Economics, Minor in Mathematics',
+    degree: 'B.A. Economics (Honors), Minor in Mathematics',
     period: '2025 – Present',
     location: 'San Marcos, TX',
     logo: '/logos/txstate.png',
