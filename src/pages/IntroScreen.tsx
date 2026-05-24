@@ -11,9 +11,9 @@ interface Ripple { x: number; y: number; radius: number; alpha: number }
 interface Props   { onEnter: () => void }
 
 const COLORS = ['#38bdf8','#67e8f9','#818cf8','#a5b4fc','#7dd3fc','#38bdf8','#38bdf8']
-const N      = 350
-const MAX_D  = 250
-const SPD    = 0.24
+const N      = 250
+const MAX_D  = 150
+const SPD    = 0.94
 const TILT   = 0.30
 
 const CITIES = [

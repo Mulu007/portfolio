@@ -17,7 +17,7 @@ const FILTERS: { value: 'all' | ProjectCategory | 'ib'; label: string }[] = [
   { value: 'economics',      label: 'Economics' },
   { value: 'software',       label: 'Software Engineering' },
   { value: 'data-analytics', label: 'Data Analytics' },
-  { value: 'research',       label: 'Research' },
+ // { value: 'research',       label: 'Research' },
   { value: 'ib',             label: 'IB' },
 ]
 
