@@ -23,8 +23,8 @@ export const projects: Project[] = [
     id: 'tea-plantations-ra',
     title: 'Research Assistantship: Tea Plantations & Local Economic Outcomes',
     description:
-      'Texas State University — Department of Economics | Spring 2026 – Present.\n Supporting faculty research on the economic impact of tea plantations and factories in Kenya. Addressing fragmented location data, I built a Python pipeline using the Google Geocoding API to convert physical factory addresses into precise GPS coordinates, forming the empirical base for econometric modelling of regional employment, wealth, and infrastructure outcomes.',
-    tags: ['Economic Research', 'Python', 'Geospatial Analytics', 'Econometrics', 'API Data Ingestion'],
+      'Texas State University — Department of Economics | Spring 2026 – Present.\n Supporting faculty research on the economic impact of tea plantations and factories in Kenya. Addressing fragmented location data, I manually geolocated tea factories by extracting GPS coordinates from online sources, contributing to the data collection base for analysis of regional employment, wealth and infrastructure outcomes.',
+    tags: ['Economic Research', 'Geospatial Analytics', 'API Data Ingestion'],
     metric: { label: 'Status', value: 'Publishing in process' },
     category: 'economics',
     featured: true,
@@ -34,8 +34,8 @@ export const projects: Project[] = [
         text: 'Since tea harvesting disproportionately employs women (due to the physical advantage shorter stature offers in plucking), and evidence suggests women allocate a greater share of income toward household welfare than men, the research examines whether proximity to tea factories improves living standards through female labor force participation.',
       },
       {
-        label: 'Geocoding Pipeline',
-        text: 'Built a Python pipeline that automated address-to-coordinate conversion across the dataset using the Google Geocoding API, eliminating manual lookup and accelerating the research timeline.',
+        label: 'Geolocation and Data Cleaning',
+        text: 'Manually extracted GPS coordinates for tea factories from online sources, resolving fragmented location data across the dataset and establishing a clean spatial foundation for regression analysis.',
       },
       {
         label: 'Data Consolidation',
