@@ -101,7 +101,7 @@ export const interests: Interest[] = [
 ]
 
 export const competitions: { name: string; org: string; detail: string }[] = [
-  { name: 'MIT Policy Hackathon',       org: 'Massachusetts Institute of Technology', detail: 'Global 2nd place — data-driven socio-economic solutions' },
+  { name: 'MIT Policy Hackathon',       org: 'Massachusetts Institute of Technology', detail: 'Top Finalist globally — data-driven socio-economic solutions' },
   { name: 'Table Tennis U20 Tournamet', org: 'Waterford Kamhlaba', detail: '3rd place' },
 
  // { name: 'Citadel Datathon',           org: 'Citadel / Citadel Securities',          detail: 'Quantitative finance & data science challenge' },

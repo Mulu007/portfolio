@@ -95,12 +95,12 @@ export const awards: Award[] = [
   },
   {
     id: 8,
-    title: "Finalist - MIT Policy Hackathon",
+    title: "Top Finalist — MIT Policy Hackathon",
     org: "Massachusetts Institute of Technology (MIT)",
     year: "2024",
-    description: "Ranked as the 2nd best team globally in the policy challenge; focused on data-driven solutions for complex socio-economic issues.",
+    description: "Recognised as a top team globally in the policy challenge, developing data-driven solutions for complex socio-economic issues.",
     category: "competition",
-    highlight: "Global 2nd Place",
+    highlight: "Top Team Globally",
     // image: '/awards/mit-hackathon.jpg',
   },
 
