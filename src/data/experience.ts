@@ -83,9 +83,9 @@ export const relevantExperience: WorkExperience[] = [
     logo: '/logos/txstate.png',
     details: [
       'Supporting faculty research on the economic impact of tea plantations and factories in Kenya',
-      'Built a Python geocoding pipeline using the Google Geocoding API to convert factory addresses into GPS coordinates',
-      'Consolidating factory-level data with regional macroeconomic variables ahead of regression analysis',
-      'Structuring spatial boundaries for comparisons between factory-adjacent regions and control areas',
+      'Manually geolocated tea factories by extracting GPS coordinates from online sources, resolving fragmented location data across the dataset',
+      'Consolidating factory-level data with regional macroeconomic variables under strict cleaning protocols',
+      'Structuring spatial boundaries to support comparisons between factory-adjacent regions and control areas',
     ],
   },
   {
