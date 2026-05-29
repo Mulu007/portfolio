@@ -38,9 +38,9 @@ export const awards: Award[] = [
     title: "Full Scholarship - UWC Davis Scholar",
     org: "Texas State University",
     year: "2025 - 2029",
-    description: "A prestigious merit-based scholarship awarded to UWC graduates, covering full tuition and fees for undergraduate studies.",
+    description: "A prestigious merit-based scholarship awarded to UWC graduates, covering all tuition, fees and living expenses through to degree completion.",
     category: "academic",
-    highlight: "Valued at $160,000",
+    highlight: "Full Scholarship",
     // image: '/awards/davis-scholar.jpg',
   },
   {
@@ -58,9 +58,9 @@ export const awards: Award[] = [
     title: "Full Scholarship - Dare to Dream",
     org: "Waterford Kamhlaba UWC - Eswatini",
     year: "2023 - 2024",
-    description: "Highly competitive merit award granted for academic excellence and leadership within the Economics department.",
+    description: "Highly competitive merit award granted for academic excellence and leadership, covering all tuition and boarding fees for the full IB programme.",
     category: "academic",
-    highlight: "ZAR 600,000 / $70,000",
+    highlight: "Full Scholarship",
     // image: '/awards/dare-to-dream.jpg',
   },
   {
