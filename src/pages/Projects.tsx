@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowUpRight, Code2, TrendingUp } from 'lucide-react'
+import { ArrowUpRight, Code2, TrendingUp, Building2, User } from 'lucide-react'
 import { projects, categoryLabels, type ProjectCategory } from '../data/projects'
 import ScrollReveal from '../components/ui/ScrollReveal'
 import PaperCard from '../components/ui/GlassCard'
@@ -104,6 +104,23 @@ export default function Projects() {
                         </div>
                       )}
                     </div>
+
+                    {/* Institution & Supervisor */}
+                    {(p.institution || p.supervisor) && (
+                      <div className="flex flex-wrap gap-3 mt-2 mb-1">
+                        {p.institution && (
+                          <span className="flex items-center gap-1 font-mono text-xs"
+                            style={{ color: '#38bdf8' }}>
+                            <Building2 size={11} /> {p.institution}
+                          </span>
+                        )}
+                        {p.supervisor && (
+                          <span className="flex items-center gap-1 font-mono text-xs text-ink-muted">
+                            <User size={11} /> {p.supervisor}
+                          </span>
+                        )}
+                      </div>
+                    )}
 
                     {/* Divider */}
                     <div className="h-px bg-rule my-3" />

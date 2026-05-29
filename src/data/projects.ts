@@ -12,7 +12,9 @@ export interface Project {
   pdf?: string
   category: ProjectCategory
   featured?: boolean
-  ib?: boolean          // International Baccalaureate work
+  ib?: boolean
+  institution?: string
+  supervisor?: string
   piecewiseEquations?: { expr: string; domain: string }[]
   equationSystem?: { label: string; latex: string }[]
   findings?: { label: string; text: string }[]
@@ -22,9 +24,11 @@ export const projects: Project[] = [
   {
     id: 'tea-plantations-ra',
     title: 'Research Assistantship: Tea Plantations & Local Economic Outcomes',
+    institution: 'Texas State University — Department of Economics',
+    supervisor: 'Prof. Anurag Deb',
     description:
-      'Texas State University — Department of Economics | Spring 2026 – Present.\n Supporting faculty research on the economic impact of tea plantations and factories in Kenya. Addressing fragmented location data, I manually geolocated tea factories by extracting GPS coordinates from online sources, contributing to the data collection base for analysis of regional employment, wealth and infrastructure outcomes.',
-    tags: ['Economic Research', 'Geospatial Analytics', 'API Data Ingestion'],
+      'Supporting faculty research on the economic impact of tea plantations and factories in Kenya. Addressing fragmented location data, I manually geolocated tea factories by extracting GPS coordinates from online sources, contributing to the data collection base for analysis of regional employment, wealth and infrastructure outcomes.',
+    tags: ['Economic Research', 'Geospatial Analytics', 'Excel Data Cleaning'],
     metric: { label: 'Status', value: 'Publishing in process' },
     category: 'economics',
     featured: true,
@@ -178,6 +182,7 @@ export const projects: Project[] = [
   {
     id: 'globalmart-powerbi',
     title: 'GlobalMart Sales Analysis: Power BI Dashboard & Relational Data Modeling',
+    institution: 'Moringa School — Data Analytics',
     description:
       'Moringa School — Data Analytics.\nDesigned an end-to-end analytics pipeline in Power BI to identify growth opportunities and diagnose profitability challenges across GlobalMart\'s 2022–2024 U.S. retail operations. After cleaning and standardizing a 337-transaction dataset in Excel, I normalized the flat file into a star schema with three dimension tables (Product, Region, Date), authored eight DAX measures including Year-over-Year revenue growth and shipping duration, and built four interactive reports covering executive summary, sales trends, order detail, and regional performance.',
     tags: ['Power BI', 'DAX', 'Star Schema', 'Data Cleaning', 'Business Analytics', 'Excel'],
