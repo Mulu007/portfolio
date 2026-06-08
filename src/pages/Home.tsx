@@ -128,19 +128,19 @@ export default function Home() {
               Abstract
             </p>
             <p className="text-ink leading-relaxed">
-              I am an Economics and Mathematics undergraduate driven by the idea that global events share an underlying, synchronized pattern. 
-              Currently, I am authoring research papers focused on               {' '}
+              I am an Economics and Mathematics undergraduate who studies numbers because I believe global events are never truly random; just patterns waiting to be named.
+              Currently, I am conducting research under Dr. Deb Anurag focused on               {' '}
               <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
-                VaR/sVaR
+                Vector Autoregression (VAR)
               </span>{' '}
               economic models while learning how to leverage time-series analysis to study stock market dynamics. 
-              I love translating these interconnected global events into rigorous mathematical frameworks. 
+              I love translating or rather trying to understand these interconnected global events into rigorous mathematical frameworks. 
               Looking ahead, I am building the foundations to transition into               {' '}
               <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
-                quantitative trading/research
+                PhD in Macroeconomics
               </span>{' '} or a               {' '}
               <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
-                PhD in Macroeconomics
+                quantitative trading/research
               </span>{' '}.
               </p>
           </motion.div>
