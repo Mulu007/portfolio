@@ -64,11 +64,11 @@ export const workExperience: WorkExperience[] = [
     org: 'NSSF Investment Co-operative Society',
     period: 'March 2025 – June 2025',
     location: 'Nairobi, Kenya',
-    badge: 'KES 558B+ AUM',
+    badge: 'KES 572.8B+ AUM ',
     logo: '/logos/nssf.png',
     details: [
-      'Contributed to development of a Power BI-powered KPI dashboard tracking payment flows, portfolio profitability, and operational inefficiencies across a KES 558B+ institutional investment ecosystem',
-      'Performed quantitative fixed income and real estate valuation on government securities and property assets',
+      'Contributed to development of a Power BI-powered KPI dashboard tracking payment flows, portfolio profitability and operational inefficiencies',
+      'Performed quantitative valuation on government securities, equities and real estate assets including REITs',
     ],
   },
 ]

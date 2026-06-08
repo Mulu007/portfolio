@@ -116,7 +116,9 @@ export default function Projects() {
                         )}
                         {p.supervisor && (
                           <span className="flex items-center gap-1 font-mono text-xs text-ink-muted">
-                            <User size={11} /> {p.supervisor}
+                            <User size={11} />
+                            <span className="text-ink-faint uppercase tracking-wider" style={{ fontSize: '0.65rem' }}>Supervisor:</span>
+                            {p.supervisor}
                           </span>
                         )}
                       </div>
