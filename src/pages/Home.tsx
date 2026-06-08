@@ -9,9 +9,13 @@ import { projects } from '../data/projects'
 const ROLES = [
   'Macro-Economist Enthusiast',
   'Global News Addict',
+  'First-Principles Thinker',
+  'Markets Obsessive',
+  'Curious Student',
   // 'Backyard Chicken Farmer',
   // 'Professional Pet Pamperer',
   'Decision Optmiser',
+  'Research Rabbit Hole Dweller'
 ]
 
 const KEYWORDS = [
