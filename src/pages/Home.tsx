@@ -129,7 +129,7 @@ export default function Home() {
             </p>
             <p className="text-ink leading-relaxed">
               I am an Economics and Mathematics undergraduate who studies numbers because I believe global events are never truly random; just patterns waiting to be named.
-              Currently, I am conducting research under Dr. Deb Anurag focused on               {' '}
+              Currently, I am conducting research under Dr. Anurag Deb focused on               {' '}
               <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
                 Vector Autoregression (VAR)
               </span>{' '}

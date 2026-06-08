@@ -25,9 +25,9 @@ export const projects: Project[] = [
     id: 'tea-plantations-ra',
     title: 'Research Assistantship: Tea Plantations & Local Economic Outcomes',
     institution: 'Texas State University — Department of Economics',
-    supervisor: 'Prof. Anurag Deb',
+    supervisor: 'Dr. Anurag Deb',
     description:
-      'Supporting faculty research on the economic impact of tea plantations and factories in Kenya. Addressing fragmented location data, I manually geolocated tea factories by extracting GPS coordinates from online sources, contributing to the data collection base for analysis of regional employment, wealth and infrastructure outcomes.',
+      'Supporting faculty research on the economic impact of tea plantations and factories in Kenya. Addressing fragmented location data, I manually geolocated tea factories by extracting GPS coordinates from online sources, contributing to the data collection base for analysis of regional employment, household welfare and infrastructure outcomes.',
     tags: ['Economic Research', 'Geospatial Analytics', 'Excel Data Cleaning'],
     metric: { label: 'Status', value: 'Publishing in process' },
     category: 'economics',
@@ -39,7 +39,7 @@ export const projects: Project[] = [
       },
       {
         label: 'Geolocation and Data Cleaning',
-        text: 'Manually extracted GPS coordinates for tea factories from online sources, resolving fragmented location data across the dataset and establishing a clean spatial foundation for regression analysis.',
+        text: 'Manually extracted GPS coordinates for tea factories from online sources, resolving fragmented location data across the dataset and establishing a clean spatial foundation for futher economical analysis.',
       },
       {
         label: 'Data Consolidation',
