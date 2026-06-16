@@ -100,26 +100,26 @@ export const relevantExperience: WorkExperience[] = [
     ],
   },
   {
-    role: 'Youth Summit 2026 — Invited Delegate',
+    role: ' World Bank Group Youth Summit 2026',
     org: 'World Bank Group',
     period: 'June 2026',
     location: 'Virtual',
     badge: 'Invited Delegate',
     logo: '/logos/worldbank.png',
     details: [
-      'Selected as an invited delegate to the 13th World Bank Group Youth Summit — FutureWorks: Designing Jobs for the Digital Age — a hybrid global forum convening young leaders, policymakers, and senior World Bank officials including Ajay Banga, Makhtar Diop, and Paschal Donohoe.',
-      'Sessions covered the intersection of AI and the future of work, digital and vocational skills development, youth entrepreneurship, sustainable agriculture, and financing strategies for emerging economies.',
+      'Selected to the 13th World Bank Group Youth Summit — FutureWorks: Designing Jobs for the Digital Age which is a hybrid global forum convening young leaders, policymakers and senior World Bank officials including Ajay Banga, Makhtar Diop and Paschal Donohoe.',
+      'Sessions covered the intersection of AI and the future of work, digital and vocational skills development, youth entrepreneurship, sustainable agriculture and financing strategies for emerging economies.',
     ],
   },
   {
-    role: 'Summer Series FY27',
+    role: 'Dell Summer Series FY27',
     org: 'Dell Technologies',
-    period: '2026',
+    period: 'June 2026 - July 2026',
     location: 'Virtual',
     badge: 'Summer Series',
     logo: '/logos/dell.png',
     details: [
-      'Participating in Dell Technologies\' Summer Series, a virtual program exposing high-potential students to technology strategy, AI-driven solutions, and business architecture through sessions with Dell professionals and industry experts.',
+      'A virtual program exposing high-potential students to technology strategy, AI-driven solutions and business architecture through sessions with Dell professionals and industry experts.',
     ],
   },
 ]
