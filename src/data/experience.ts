@@ -99,6 +99,29 @@ export const relevantExperience: WorkExperience[] = [
       'Selected for Goldman Sachs\' highly selective Possibilities Series, a 4-session virtual program designed for high-potential students. Sessions spanned an introduction to Wall Street and Goldman Sachs culture, an industry trajectory panel, personal branding, and direct resume and recruiting preparation with firm representatives.',
     ],
   },
+  {
+    role: 'Youth Summit 2026 — Invited Delegate',
+    org: 'World Bank Group',
+    period: '2026',
+    location: 'Virtual',
+    badge: 'Invited Delegate',
+    logo: '/logos/worldbank.png',
+    details: [
+      'Selected as an invited delegate to the World Bank Youth Summit 2026, engaging with senior global leaders on international development, finance, and economic policy.',
+      'Speakers included Ajay Banga (President, World Bank), Makhtar Diop (Managing Director, IFC), Anne Bjeurde, Paschal Donohoe, Konstantinos Kollias, Hoi Ying So, and Kate Woska.',
+    ],
+  },
+  {
+    role: 'Summer Series FY27',
+    org: 'Dell Technologies',
+    period: '2026',
+    location: 'Virtual',
+    badge: 'Summer Series',
+    logo: '/logos/dell.png',
+    details: [
+      'Participating in Dell Technologies\' Summer Series, a virtual program exposing high-potential students to technology strategy, AI-driven solutions, and business architecture through sessions with Dell professionals and industry experts.',
+    ],
+  },
 ]
 
 export const programs: Program[] = []
