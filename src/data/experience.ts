@@ -102,13 +102,13 @@ export const relevantExperience: WorkExperience[] = [
   {
     role: 'Youth Summit 2026 — Invited Delegate',
     org: 'World Bank Group',
-    period: '2026',
+    period: 'June 2026',
     location: 'Virtual',
     badge: 'Invited Delegate',
     logo: '/logos/worldbank.png',
     details: [
-      'Selected as an invited delegate to the World Bank Youth Summit 2026, engaging with senior global leaders on international development, finance, and economic policy.',
-      'Speakers included Ajay Banga (President, World Bank), Makhtar Diop (Managing Director, IFC), Anne Bjeurde, Paschal Donohoe, Konstantinos Kollias, Hoi Ying So, and Kate Woska.',
+      'Selected as an invited delegate to the 13th World Bank Group Youth Summit — FutureWorks: Designing Jobs for the Digital Age — a hybrid global forum convening young leaders, policymakers, and senior World Bank officials including Ajay Banga, Makhtar Diop, and Paschal Donohoe.',
+      'Sessions covered the intersection of AI and the future of work, digital and vocational skills development, youth entrepreneurship, sustainable agriculture, and financing strategies for emerging economies.',
     ],
   },
   {
