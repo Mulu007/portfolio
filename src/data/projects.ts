@@ -21,6 +21,33 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+{
+  id: 'oil-shock-industry-transmission-svar',
+  title: 'Spot vs. Speculative Oil Shocks: An Input-Output VAR Approach to Industry-Level Transmission',
+  institution: 'Texas State University — McCoy College of Business',
+  supervisor: 'Dr. Anurag Deb',
+  description:
+    'Building a structural VAR (SVAR) framework to decompose oil price shocks into spot and speculative components and trace their transmission across 43 U.S. industries via input-output linkages. Uses a balanced monthly PPI panel (2004-2026), log-transformed and seasonally adjusted with X-13ARIMA-SEATS. All series confirmed I(1) via ADF, KPSS, and Zivot-Andrews testing (accounting for structural breaks). Impulse Response Functions and Forecast Error Variance Decomposition isolate how much industry-level price volatility is attributable to spot versus speculative oil shocks, conditional on each industry\'s position in the input-output network.',
+  tags: ['SVAR', 'Oil Shocks', 'Input-Output Analysis', 'Time Series', 'Impulse Response', 'R', 'PPI Data'],
+  github: 'https://github.com/Mulu007/VAR',
+  metric: { label: 'Status', value: 'In Progress' },
+  category: 'economics',
+  featured: true,
+  findings: [
+    {
+      label: '43-Industry PPI Panel Construction',
+      text: 'Assembled a balanced monthly Producer Price Index panel spanning 2004-2026 across 43 industries, log-transformed and seasonally adjusted using X-13ARIMA-SEATS, with all series confirmed stationary in first differences (I(1)) via ADF, KPSS, and Zivot-Andrews unit root testing.',
+    },
+    {
+      label: 'VAR Dimensionality Strategy',
+      text: 'Currently evaluating modeling approaches for high-dimensional transmission — large Bayesian VAR with Minnesota shrinkage, Factor-Augmented VAR (FAVAR), an input-output-restricted VAR imposing network structure, or a small curated VAR — to balance degrees-of-freedom loss against capturing full cross-industry transmission.',
+    },
+    {
+      label: 'Shock Decomposition & Transmission Channels',
+      text: 'Structural identification separates spot from speculative oil price shocks, with planned IRF and FEVD analysis to quantify the magnitude, decay horizon, and input-output-weighted transmission of each shock type across industries.',
+    },
+  ],
+},
   {
     id: 'tea-plantations-ra',
     title: 'Research Assistantship: Tea Plantations & Local Economic Outcomes',
