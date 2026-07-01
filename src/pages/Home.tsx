@@ -183,7 +183,7 @@ export default function Home() {
                className="btn-ghost">
               <Code2 size={16} /> GitHub
             </a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-ghost">
+            <a href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noopener noreferrer" className="btn-ghost">
               <FileText size={16} /> CV
             </a>
           </motion.div>
