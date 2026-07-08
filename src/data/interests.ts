@@ -21,35 +21,35 @@ export interface Interest {
 export const skills: Skill[] = [
   // Languages
   { name: 'Javascript',  level: 4, category: 'lang', color: '#38bdf8' },
-  { name: 'Python',  level: 3, category: 'lang', color: '#38bdf8' },
-  { name: 'R',       level: 4, category: 'lang', color: '#67e8f9' },
-  { name: 'SQL',     level: 4, category: 'lang', color: '#a5f3fc' },
-  { name: 'C++',     level: 2, category: 'lang', color: '#818cf8' },
-  { name: 'MATLAB',  level: 1, category: 'lang', color: '#a5b4fc' },
+  { name: 'Python',  level: 2, category: 'lang', color: '#38bdf8' },
+  { name: 'R',       level: 5, category: 'lang', color: '#67e8f9' },
+  { name: 'SQL',     level: 3, category: 'lang', color: '#a5f3fc' },
+  { name: 'MATLAB',  level: 2, category: 'lang', color: '#a5b4fc' },
+  { name: 'LaTeX',   level: 2, category: 'lang', color: '#a5b4fc' },
+
   // Libraries
-  { name: 'pandas',       level: 5, category: 'lib', color: '#38bdf8' },
-  { name: 'NumPy',        level: 5, category: 'lib', color: '#67e8f9' },
+ // { name: 'pandas',       level: 3, category: 'lib', color: '#38bdf8' },
+ // { name: 'NumPy',        level: 5, category: 'lib', color: '#67e8f9' },
  //{ name: 'scikit-learn', level: 4, category: 'lib', color: '#a5f3fc' },
  //{ name: 'statsmodels',  level: 4, category: 'lib', color: '#818cf8' },
  //{ name: 'PyTorch',      level: 3, category: 'lib', color: '#a5b4fc' },
  //{ name: 'cvxpy',        level: 3, category: 'lib', color: '#38bdf8' },
   { name: 'ggplot2',      level: 5, category: 'lib', color: '#67e8f9' },
   { name: 'tidyverse',    level: 4, category: 'lib', color: '#67e8f9' },
+  { name: 'vars',         level: 4, category: 'lib', color: '#67e8f9' },
   { name: 'dplyr',        level: 4, category: 'lib', color: '#a5f3fc' },
   { name: 'React.js',     level: 4, category: 'lib', color: '#38bdf8' },
   // Tools
   { name: 'Git',       level: 4, category: 'tool', color: '#818cf8' },
   { name: 'Jupyter',   level: 5, category: 'tool', color: '#38bdf8' },
-  { name: 'Stata',     level: 4, category: 'tool', color: '#67e8f9' },
-  { name: 'Bloomberg', level: 2, category: 'tool', color: '#a5f3fc' },
+  { name: 'Bloomberg Terminal', level: 3, category: 'tool', color: '#a5f3fc' },
   { name: 'Power BI',  level: 4, category: 'tool', color: '#f59e0b' },
   { name: 'Excel',     level: 5, category: 'tool', color: '#67e8f9' },
   // Finance concepts
   { name: 'Derivatives',       level: 4, category: 'finance', color: '#38bdf8' },
   { name: 'Time Series',       level: 4, category: 'finance', color: '#67e8f9' },
   { name: 'Fixed Income',      level: 4, category: 'finance', color: '#a5f3fc' },
-  { name: 'Bonds',             level: 4, category: 'finance', color: '#a5f3fc' },
-  { name: 'Macro/Micro Theory',level: 5, category: 'finance', color: '#818cf8' },
+  { name: 'Monte Carlo Simulation',  level: 3, category: 'finance', color: '#a5f3fc' },
 ]
 
 export const books: Book[] = [
