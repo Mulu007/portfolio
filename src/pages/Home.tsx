@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, type Variants } from 'framer-motion'
-import { ArrowRight, Code2, FileText, Mail } from 'lucide-react'
+import { ArrowRight, Code2, FileText } from 'lucide-react'
 import ScrollReveal from '../components/ui/ScrollReveal'
 import PaperCard from '../components/ui/GlassCard'
 import { projects } from '../data/projects'
@@ -17,18 +17,13 @@ const ROLES = [
 ]
 
 const KEYWORDS = [
-  'Econometric modeling',
-  'Time Series',
-  'Numerical Optmisation',
-  'Applied Calculus',
+  'Time Series Econometrics',
+  'VAR/SVAR',
+  'Statistical ModelING',
+  'R',
+  'Python (Learning)',
   'Market Analysis',
   'Quantitative Analysis',
-]
-
-const HIGHLIGHT_LABELS = [
-  { top: 'RESEARCH', sub: 'NOW' },
-  { top: 'METHODS',  sub: 'SHIPPED' },
-  { top: 'CODE',     sub: 'SHIPPED' },
 ]
 
 function Typewriter() {
@@ -73,8 +68,8 @@ const pageVariants: Variants = {
 }
 
 const journeyVariants: Variants = {
-  hidden: {},
-  show:   { transition: { staggerChildren: 0.12 } },
+  hidden:  {},
+  show:    { transition: { staggerChildren: 0.12 } },
 }
 
 const journeyItem: Variants = {
@@ -88,171 +83,161 @@ export default function Home() {
   return (
     <motion.div variants={pageVariants} initial="initial" animate="enter" exit="exit">
 
-      {/* ── Two-column header ─────────────────────── */}
-      <motion.div variants={journeyVariants} initial="hidden" animate="show" className="mb-12">
-        <div className="flex gap-8 items-start">
+      {/* ── Manifesto card ─────────────────────────── */}
+      <motion.div
+        variants={journeyVariants}
+        initial="hidden"
+        animate="show"
+      >
+        <div className="abstract-box mb-10">
 
-          {/* ── Left: photo box + buttons ── */}
-          <motion.div variants={journeyItem} className="flex flex-col gap-2 shrink-0" style={{ width: '170px' }}>
-
-            {/* Photo placeholder */}
-            <div
-              className="w-full bg-paper-dark flex flex-col justify-end p-2"
-              style={{ aspectRatio: '1 / 1', border: '1px solid var(--rule)' }}
-            >
-              <span
-                className="font-mono text-ink-faint uppercase leading-snug"
-                style={{ fontSize: '0.58rem', letterSpacing: '0.06em' }}
-              >
-                FIG. 0 — THE AUTHOR.<br />NAIROBI — ESWATINI<br />— TEXAS.
-              </span>
-            </div>
-
-            {/* Buttons */}
-            <a
-              href="https://github.com/Mulu007"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-ghost justify-center"
-              style={{ fontSize: '0.72rem', padding: '0.3rem 0.6rem' }}
-            >
-              <Code2 size={13} /> GitHub
-            </a>
-            <a
-              href="mailto:brianmulu007@gmail.com"
-              className="btn-ghost justify-center"
-              style={{ fontSize: '0.72rem', padding: '0.3rem 0.6rem' }}
-            >
-              <Mail size={13} /> Email
-            </a>
-            <a
-              href={`${import.meta.env.BASE_URL}resume.pdf`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary justify-center"
-              style={{ fontSize: '0.72rem', padding: '0.3rem 0.6rem' }}
-            >
-              <FileText size={13} /> CV ↓
-            </a>
+          {/* Top bar */}
+          <motion.div
+            variants={journeyItem}
+            className="flex items-center justify-between flex-wrap gap-2 mb-5 pb-4"
+            style={{ borderBottom: '1px solid var(--rule)' }}
+          >
+            <span className="font-mono text-xs text-ink-faint uppercase tracking-widest">
+              · Undergraduate Portfolio ·
+            </span>
+            <span className="font-mono text-xs text-ink-faint">{new Date().getFullYear()}</span>
           </motion.div>
 
-          {/* ── Right: content ── */}
-          <div className="flex-1 min-w-0">
+          {/* Name */}
+          <motion.h1
+            variants={journeyItem}
+            className="font-display text-4xl md:text-5xl font-bold text-ink leading-tight mb-1"
+          >
+            Silvanius Brian Mulu
+          </motion.h1>
 
-            {/* Top bar */}
-            <motion.div
-              variants={journeyItem}
-              className="flex items-center justify-between flex-wrap gap-2 mb-5 pb-4"
-              style={{ borderBottom: '1px solid var(--rule)' }}
-            >
-              <span className="font-mono text-xs text-ink-faint uppercase tracking-widest">
-                · Undergraduate Portfolio ·
-              </span>
-              <span className="font-mono text-xs text-ink-faint">{new Date().getFullYear()}</span>
-            </motion.div>
+          <motion.p variants={journeyItem} className="font-mono text-sm text-ink-muted mb-4">
+            Department of Economics ·{' '}
+            <span className="text-navy">B.A. Economics (Honors), Minor in Mathematics</span>
+          </motion.p>
 
-            {/* Name */}
-            <motion.h1
-              variants={journeyItem}
-              className="font-display text-4xl md:text-5xl font-bold text-ink leading-tight mb-1"
-            >
-              Silvanius Brian Mulu
-            </motion.h1>
+          {/* Typewriter */}
+          <motion.p variants={journeyItem} className="font-serif text-lg text-ink-muted mb-6">
+            <Typewriter />
+          </motion.p>
 
-            <motion.p variants={journeyItem} className="font-mono text-sm text-ink-muted mb-4">
-              Department of Economics ·{' '}
-              <span className="text-navy">B.A. Economics (Honors), Minor in Mathematics</span>
-            </motion.p>
+          {/* Abstract */}
+<motion.div variants={journeyItem} className="mb-6">
+  <p className="font-mono text-xs font-bold uppercase tracking-widest text-gold-dark mb-3">
+    Abstract
+  </p>
+  <p className="text-ink leading-relaxed">
+    I am an Economics and Mathematics double major working at the intersection of
+    econometrics and markets. As a research assistant under Dr. Anurag Deb, I am
+    co-authoring a paper on how oil price shocks transmit through US industries,
+    building the full{' '}
+    <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
+      Vector Autoregression (VAR)
+    </span>{' '}
+    pipeline in R from raw PPI data through stationarity testing and structural
+    identification.
+  </p>
+  <p className="text-ink leading-relaxed mt-4">
+    Outside research, I do extensive independent study of financial instruments, market microstructure and{' '}
+    <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
+      Time Series Analysis.
+    </span>{' '}
+    Looking ahead, I am building the foundations for{' '}
+    <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
+      quantitative trading/ research
+    </span>{' '}
+    roles with a longer-term interest in a{' '}
+    <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
+      PhD in Macro-Economics or Econometrics
+    </span>.
+  </p>
+</motion.div>
 
-            {/* Typewriter */}
-            <motion.p variants={journeyItem} className="font-serif text-lg text-ink-muted mb-6">
-              <Typewriter />
-            </motion.p>
+          {/* Keywords */}
+          <motion.div variants={journeyItem} className="mb-6">
+            <p className="font-mono text-xs font-bold uppercase tracking-widest text-gold-dark mb-2">
+              Keywords
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {KEYWORDS.map((k, i) => (
+                <motion.span
+                  key={k}
+                  className="tag-default"
+                  initial={{ opacity: 0, scale: 0.85 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.6 + i * 0.04, duration: 0.3 }}
+                >
+                  {k}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
 
-            {/* Abstract */}
-            <motion.div variants={journeyItem} className="mb-6">
-              <p className="font-mono text-xs font-bold uppercase tracking-widest text-gold-dark mb-3">
-                Abstract
-              </p>
-              <p className="text-ink leading-relaxed">
-                I am an Economics and Mathematics undergraduate who studies numbers because I believe global events are never truly random; just patterns waiting to be named.
-                Currently, I am conducting research under Dr. Anurag Deb focused on{' '}
-                <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
-                  Vector Autoregression (VAR)
-                </span>{' '}
-                economic models while learning how to leverage time-series analysis to study stock market dynamics.
-                I love translating or rather trying to understand these interconnected global events into rigorous mathematical frameworks.
-                Looking ahead, I am building the foundations to transition into{' '}
-                <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
-                  PhD in Macroeconomics
-                </span>{' '} or a{' '}
-                <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
-                  quantitative trading/research
-                </span>{' '}.
-              </p>
-            </motion.div>
-
-            {/* Keywords */}
-            <motion.div variants={journeyItem}>
-              <p className="font-mono text-xs font-bold uppercase tracking-widest text-gold-dark mb-2">
-                Keywords
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {KEYWORDS.map((k, i) => (
-                  <motion.span
-                    key={k}
-                    className="tag-default"
-                    initial={{ opacity: 0, scale: 0.85 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.6 + i * 0.04, duration: 0.3 }}
-                  >
-                    {k}
-                  </motion.span>
-                ))}
-              </div>
-            </motion.div>
-          </div>
+          {/* CTAs */}
+          <motion.div
+            variants={journeyItem}
+            className="flex flex-wrap gap-3 pt-4"
+            style={{ borderTop: '1px solid var(--rule)' }}
+          >
+            <Link to="/projects" className="btn-primary">
+              View Research <ArrowRight size={16} />
+            </Link>
+            <a href="https://github.com/Mulu007" target="_blank" rel="noopener noreferrer"
+               className="btn-ghost">
+              <Code2 size={16} /> GitHub
+            </a>
+            <a href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+              <FileText size={16} /> CV
+            </a>
+          </motion.div>
         </div>
       </motion.div>
 
-      {/* ── Highlights ────────────────────────────── */}
+      {/* ── Featured projects ─────────────────────── */}
       <ScrollReveal delay={0.1}>
-        <div className="section-rule mb-6">
-          <span className="section-heading">Highlights</span>
+        <div className="section-rule">
+          <span className="section-heading">§1 &nbsp;Featured Research</span>
         </div>
       </ScrollReveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        {featured.map((p, i) => {
-          const lbl = HIGHLIGHT_LABELS[i] ?? { top: 'PROJECT', sub: 'SHIPPED' }
-          return (
-            <ScrollReveal key={p.id} delay={i * 0.1}>
-              <PaperCard className="p-5 h-full flex flex-col" accent="#38bdf8">
-                <p className="font-mono text-xs font-bold uppercase tracking-widest text-gold-dark mb-3">
-                  {lbl.top} —{' '}
-                  <span className="text-ink-faint">{lbl.sub}</span>
-                </p>
-                <p className="text-ink font-bold text-sm leading-relaxed line-clamp-5 flex-1">
-                  {p.description}
-                </p>
-                <Link
-                  to="/projects"
-                  className="inline-flex items-center gap-1 font-mono text-xs text-gold-dark hover:text-gold transition-colors mt-4"
-                >
-                  Read more <ArrowRight size={11} />
-                </Link>
-              </PaperCard>
-            </ScrollReveal>
-          )
-        })}
+      <div className="space-y-4">
+        {featured.map((p, i) => (
+          <ScrollReveal key={p.id} delay={i * 0.08}>
+            <PaperCard className="p-6" accent="#38bdf8">
+              <div className="flex items-start gap-4">
+                <span className="cite-num mt-0.5">[{i + 1}]</span>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start justify-between gap-3 flex-wrap mb-1">
+                    <h3 className="font-display font-bold text-lg text-ink leading-snug">
+                      {p.title}
+                    </h3>
+                    {p.metric && (
+                      <span className="font-mono text-xs text-gold-dark font-bold whitespace-nowrap">
+                        {p.metric.label}: {p.metric.value}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-ink-muted text-sm leading-relaxed mb-3">{p.description}</p>
+                  <Link
+                    to="/projects"
+                    className="inline-flex items-center gap-1 font-mono text-xs text-gold-dark hover:text-gold transition-colors mb-3"
+                  >
+                    Click here to read more <ArrowRight size={11} />
+                  </Link>
+                  <div className="flex flex-wrap gap-1.5">
+                    {p.tags.map(t => <span key={t} className="tag-default">{t}</span>)}
+                  </div>
+                </div>
+              </div>
+            </PaperCard>
+          </ScrollReveal>
+        ))}
       </div>
 
       <ScrollReveal delay={0.1}>
-        <div className="flex justify-end">
-          <Link
-            to="/projects"
-            className="font-mono text-sm text-gold-dark hover:text-gold flex items-center gap-1 transition-colors"
-          >
+        <div className="mt-6 flex justify-end">
+          <Link to="/projects"
+            className="font-mono text-sm text-gold-dark hover:text-gold flex items-center gap-1 transition-colors">
             View all projects <ArrowRight size={14} />
           </Link>
         </div>

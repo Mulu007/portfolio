@@ -77,7 +77,7 @@ export default {
         gold:       '0 0 20px rgba(56,189,248,0.35)',
       },
       maxWidth: {
-        paper: '1100px',
+        paper: '780px',
       },
     },
   },
