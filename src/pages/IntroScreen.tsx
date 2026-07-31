@@ -290,7 +290,7 @@ export default function IntroScreen({ onEnter }: Props) {
           initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.55, duration: 0.85, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          S. Brian M.
+          Silvanius Brian Mulu 
         </motion.h1>
         <motion.p
           className="font-serif italic text-ink-muted text-sm sm:text-base max-w-sm mb-10 leading-relaxed"
@@ -298,8 +298,7 @@ export default function IntroScreen({ onEnter }: Props) {
           initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           transition={{ delay: 0.85, duration: 0.8 }}
         >
-          "If you think of it ...
-          <br />It's always been about numbers."
+        
         </motion.p>
         <motion.div
           className="flex items-start gap-10 mb-12"
