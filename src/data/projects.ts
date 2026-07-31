@@ -22,6 +22,31 @@ export interface Project {
 
 export const projects: Project[] = [
 {
+  id: 'stat-arb-oil-equities',
+  title: 'Statistical Arbitrage: Oil U.S. Equity Return Dynamics',
+  description:
+    'An independent study of the lead-lag relationship between crude oil and U.S. equity returns, laying the econometric groundwork for a pairs trading strategy. I collected and aligned daily WTI crude and U.S. equity price series, transformed both to log returns, and confirmed stationarity through Augmented Dickey-Fuller and KPSS testing. Optimal lag order was selected using AIC and BIC criteria before estimating a Vector Autoregression on the joint system. Granger causality tests and Impulse Response Functions quantify the direction and persistence of return spillovers between the two markets — establishing whether oil movements carry predictive information for equities, and over what horizon that information decays.',
+  tags: ['VAR', 'Time Series', 'Granger Causality', 'Impulse Response', 'Stationarity Testing', 'R'],
+  metric: { label: 'Status', value: 'In Progress' },
+  demo: '/papers/main.pdf',
+  github: 'https://github.com/Mulu007/pairs-trading',
+  category: 'economics',
+  findings: [
+    {
+      label: 'Stationarity & Series Preparation',
+      text: 'Daily WTI crude and U.S. equity price series were aligned and converted to log returns, with ADF and KPSS tests jointly confirming the transformed series are I(0) — a precondition for valid VAR estimation.',
+    },
+    {
+      label: 'Lag Selection & VAR Estimation',
+      text: 'AIC and BIC criteria informed optimal lag order, balancing model fit against degrees-of-freedom loss, before estimating the VAR on the joint oil-equity system.',
+    },
+    {
+      label: 'Return Spillovers & Persistence',
+      text: 'Granger causality tests establish directional predictive relationships between the two markets, while Impulse Response Functions trace the magnitude and decay horizon of a shock in one series propagating into the other.',
+    },
+  ],
+},
+{
   id: 'oil-shock-industry-transmission-svar',
   title: 'Spot vs. Speculative Oil Shocks: An Input-Output VAR Approach to Industry-Level Transmission',
   institution: 'Texas State University — McCoy College of Business',
