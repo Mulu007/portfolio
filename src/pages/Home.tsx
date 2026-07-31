@@ -126,31 +126,58 @@ export default function Home() {
   <p className="font-mono text-xs font-bold uppercase tracking-widest text-gold-dark mb-3">
     Abstract
   </p>
-  <p className="text-ink leading-relaxed">
-    I am an Economics and Mathematics double major working at the intersection of
-    econometrics and markets. As a research assistant under Dr. Anurag Deb, I am
-    co-authoring a paper on how oil price shocks transmit through US industries,
-    building the full{' '}
-    <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
-      Vector Autoregression (VAR)
-    </span>{' '}
-    pipeline in R from raw PPI data through stationarity testing and structural
-    identification.
-  </p>
-  <p className="text-ink leading-relaxed mt-4">
-    Outside research, I do extensive independent study of financial instruments, market microstructure and{' '}
-    <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
-      Time Series Analysis.
-    </span>{' '}
-    Looking ahead, I am building the foundations for{' '}
-    <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
-      quantitative trading/ research
-    </span>{' '}
-    roles with a longer-term interest in a{' '}
-    <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
-      PhD in Macro-Economics or Econometrics
-    </span>.
-  </p>
+<p className="text-ink leading-relaxed">
+  I am an Economics major and Mathematics minor who enjoys reading and applying theoretical models to real world problems.
+  As a research assistant under Dr. Anurag Deb, I am currently working on my honors thesis studying how industries with stronger{' '}
+  <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
+    oil linkage factors
+  </span>{' '}
+  experience sharper upstream and downstream propagation of{' '}
+  <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
+    oil price shocks.
+  </span>{' '}
+  The project draws on{' '}
+  <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
+    input-output analysis,
+  </span>{' '}
+  macroeconomics, network theory and{' '}
+  <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
+    VAR and SVAR frameworks
+  </span>{' '}
+  to trace how shocks travel through the industrial structure of the U.S. economy.
+</p>
+
+<p className="text-ink leading-relaxed mt-4">
+  Independently, I am working on a{' '}
+  <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
+    statistical arbitrage
+  </span>{' '}
+  paper examining{' '}
+  <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
+    pairs trading dynamics
+  </span>{' '}
+  between oil and U.S. equities.
+</p>
+
+<p className="text-ink leading-relaxed mt-4">
+  Outside research, I read on financial instruments,{' '}
+  <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
+    market microstructure
+  </span>{' '}
+  and{' '}
+  <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
+    Time Series Analysis.
+  </span>{' '}
+  Looking ahead, my longer term goal is a{' '}
+  <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
+    PhD in Macroeconomics or Econometrics
+  </span>{' '}
+  with{' '}
+  <span className="text-gold font-semibold" style={{ textShadow: '0 0 14px rgba(56,189,248,0.75)' }}>
+    quantitative research
+  </span>
+  {' '}as the foundation I am building toward now.
+</p>
 </motion.div>
 
           {/* Keywords */}
