@@ -73,7 +73,7 @@ export const interests: Interest[] = [
   {
     label: 'Checkers',
     icon: '',
-    description: 'Most people learn checkers as children and forget it exists. I discovered it through Assassin\'s Creed IV: Black Flag, went straight to Expert and have refused to play anything lower since. A pirate game accidentally gave me a strategy obsession',
+    description: 'Most people learn checkers as children and forget it exists. I discovered it through Assassin\'s Creed IV: Black Flag. A pirate game accidentally gave me a strategy obsession',
     image: 'https://i.ytimg.com/vi/aRizDiH-cuQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCeXDPefQDkv4uv02vX3oWvQAks0g',
   },
   {
@@ -101,9 +101,10 @@ export const interests: Interest[] = [
 ]
 
 export const competitions: { name: string; org: string; detail: string }[] = [
+  { name: 'Jump Trading Probability Cup', org:'Jump Trading', detail:'Competed in Jump Trading\'s Probability Cup forecasting competition, placing in the top 5% of algorithmic forecast submissions globally.'}, 
   { name: 'MIT Policy Hackathon',       org: 'Massachusetts Institute of Technology', detail: 'Top Finalist globally — data-driven socio-economic solutions' },
   { name: 'Table Tennis U20 Tournamet', org: 'Waterford Kamhlaba', detail: '3rd place' },
-
+  
  // { name: 'Citadel Datathon',           org: 'Citadel / Citadel Securities',          detail: 'Quantitative finance & data science challenge' },
  // { name: 'QMSA Case Competition',      org: 'Quant Management Society',              detail: 'Portfolio construction under constraints' },
 ]
