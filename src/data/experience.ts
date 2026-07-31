@@ -42,7 +42,7 @@ export const education: Education[] = [
     location: 'San Marcos, TX',
     logo: '/logos/txstate.png',
     details: [
-      'Relevant Coursework: Calculus, Advanced Macroeconomics, Business Statistics, Ethics',
+      'Relevant Coursework: Calculus , Principles of Micro and Macro Economics, Advanced Macroeconomics, Business Statistics, Physics (I & II) Financial Accounting, Managerial Accounting,',
     ],
   },
   {
@@ -60,15 +60,16 @@ export const education: Education[] = [
 
 export const workExperience: WorkExperience[] = [
   {
-    role: 'Investment Analyst Intern',
-    org: 'NSSF Investment Co-operative Society',
+    role: 'Data Analyst Intern',
+    org: 'National Social Security Fund',
     period: 'March 2025 – June 2025',
     location: 'Nairobi, Kenya',
     badge: 'KES 572.8B+ AUM ',
     logo: '/logos/nssf.png',
     details: [
-      'Contributed to development of a Power BI-powered KPI dashboard tracking payment flows, portfolio profitability and operational inefficiencies',
-      'Performed quantitative valuation on government securities, equities and real estate assets including REITs',
+      'Built Power BI dashboards to monitor payment flows and portfolio profitability across the national pension fund portfolio, enabling real time performance tracking',
+      'Performed pivot table analysis on financial statements and reports to identify trends in fixed income, equities and real estate assets',
+      'Collaborated with backend engineers on schema design and data validation rules for the member registration system',
     ],
   },
 ]

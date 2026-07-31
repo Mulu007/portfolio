@@ -103,7 +103,15 @@ export const awards: Award[] = [
     highlight: "Top Team Globally",
     // image: '/awards/mit-hackathon.jpg',
   },
-
+  {
+  id: 10,
+  title: 'Jump Trading Probability Cup',
+  org: 'Jump Trading',
+  year: '2026',
+  description: 'Competed in Jump Trading\'s Probability Cup forecasting competition, placing in the top 5% of algorithmic forecast submissions globally.',
+  category: 'competition',
+  highlight: 'Top 5% Globally',
+  },
 ]
 
 export const categoryMeta: Record<AwardCategory, { label: string; color: string; tagClass: string }> = {
