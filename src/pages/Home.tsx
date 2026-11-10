@@ -57,8 +57,8 @@ export default function Home() {
         </p>
 
         <p className="font-display text-[17px] leading-[1.9] max-w-[680px] mb-8">
-          I enjoy studying time series and financial markets.My research interests currently center on time-series econometrics 
-          and the empiritcal dynamics of financial markets.
+          I enjoy studying time series and financial markets. My research interests currently center on time-series econometrics 
+          and the empirical dynamics of financial markets.
         </p>
 
         <div className="flex flex-wrap items-center gap-6">
