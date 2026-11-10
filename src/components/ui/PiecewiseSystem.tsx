@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+﻿import { useEffect, useRef } from 'react'
 import katex from 'katex'
 
 interface PieceRow {
@@ -30,9 +30,9 @@ export default function PiecewiseSystem({ rows }: Props) {
     <div
       className="rounded-sm px-4 py-3 mt-3 mb-4 overflow-x-auto"
       style={{
-        background:   'rgba(56,189,248,0.04)',
-        border:       '1px solid rgba(56,189,248,0.18)',
-        boxShadow:    '0 0 18px rgba(56,189,248,0.06)',
+        background:   'rgba(46,97,90,0.04)',
+        border:       '1px solid rgba(46,97,90,0.18)',
+        boxShadow:    '0 0 18px rgba(46,97,90,0.06)',
       }}
     >
       {/* Label */}
@@ -55,9 +55,9 @@ export default function PiecewiseSystem({ rows }: Props) {
         <div
           className="shrink-0 self-stretch"
           style={{
-            borderLeft:   '1.5px solid rgba(56,189,248,0.55)',
-            borderTop:    '1.5px solid rgba(56,189,248,0.55)',
-            borderBottom: '1.5px solid rgba(56,189,248,0.55)',
+            borderLeft:   '1.5px solid rgba(46,97,90,0.55)',
+            borderTop:    '1.5px solid rgba(46,97,90,0.55)',
+            borderBottom: '1.5px solid rgba(46,97,90,0.55)',
             width:        '8px',
             borderRadius: '3px 0 0 3px',
             minHeight:    `${rows.length * 2}rem`,
@@ -75,7 +75,7 @@ export default function PiecewiseSystem({ rows }: Props) {
               {/* Domain */}
               <span
                 className="text-xs shrink-0"
-                style={{ color: 'rgba(56,189,248,0.60)' }}
+                style={{ color: 'rgba(46,97,90,0.60)' }}
               >
                 <KatexSpan latex={row.domain} />
               </span>

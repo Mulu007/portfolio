@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import { GraduationCap, Briefcase, Award, MapPin, Calendar, ArrowUpRight, Star } from 'lucide-react'
 import ScrollReveal from '../components/ui/ScrollReveal'
 import PaperCard from '../components/ui/GlassCard'
@@ -13,7 +13,7 @@ function Logo({ src, name }: { src?: string; name: string }) {
     return (
       <div
         className="h-19 shrink-0 flex items-center justify-center rounded-sm"
-        style={{ minWidth: '3.5rem', maxWidth: '7rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(56,189,248,0.15)', padding: '6px' }}
+        style={{ minWidth: '3.5rem', maxWidth: '7rem', background: 'rgba(37,43,42,0.04)', border: '1px solid rgba(46,97,90,0.15)', padding: '6px' }}
       >
         <img
           src={toSrc(src)}
@@ -26,7 +26,7 @@ function Logo({ src, name }: { src?: string; name: string }) {
   return (
     <div
       className="w-14 h-14 rounded-sm flex items-center justify-center shrink-0 font-display font-bold text-xl"
-      style={{ background: 'rgba(56,189,248,0.08)', border: '1px solid rgba(56,189,248,0.18)', color: '#38bdf8' }}
+      style={{ background: 'rgba(46,97,90,0.08)', border: '1px solid rgba(46,97,90,0.18)', color: '#2e615a' }}
     >
       {name.charAt(0)}
     </div>
@@ -45,8 +45,8 @@ export default function Experience() {
 
       {/* Page header */}
       <ScrollReveal>
-        <p className="font-mono text-xs text-ink-faint uppercase tracking-widest mb-2">§5</p>
-        <h1 className="font-display text-4xl font-bold text-ink mb-2">Experience</h1>
+        <p className="font-mono text-[10px] uppercase tracking-[0.09em] text-gold pt-20 mb-6">Curriculum vitae</p>
+        <h1 className="text-[clamp(30px,4vw,44px)] leading-[1.2] tracking-[-0.05em] mb-4">Experience</h1>
         <p className="text-ink-muted leading-relaxed mb-10">
           Academic background, research experience and professional certifications.
         </p>
@@ -65,7 +65,7 @@ export default function Experience() {
       <div className="space-y-4 mb-12">
         {education.map((edu, i) => (
           <ScrollReveal key={edu.institution} delay={i * 0.06}>
-            <PaperCard className="p-6" accent="#38bdf8">
+            <PaperCard className="p-6" accent="#2e615a">
               <div className="flex items-start gap-4">
                 <Logo src={edu.logo} name={edu.institution} />
                 <div className="flex-1 min-w-0">
@@ -114,7 +114,7 @@ export default function Experience() {
       <div className="space-y-4 mb-12">
         {workExperience.map((job, i) => (
           <ScrollReveal key={job.role + job.org} delay={i * 0.06}>
-            <PaperCard className="p-6" accent="#38bdf8">
+            <PaperCard className="p-6" accent="#2e615a">
               <div className="flex items-start gap-4">
                 <Logo src={job.logo} name={job.org} />
                 <div className="flex-1 min-w-0">
@@ -164,7 +164,7 @@ export default function Experience() {
       <div className="space-y-4 mb-12">
         {relevantExperience.map((job, i) => (
           <ScrollReveal key={job.role + job.org} delay={i * 0.06}>
-            <PaperCard className="p-6" accent="#38bdf8">
+            <PaperCard className="p-6" accent="#2e615a">
               <div className="flex items-start gap-4">
                 <Logo src={job.logo} name={job.org} />
                 <div className="flex-1 min-w-0">
@@ -226,7 +226,7 @@ export default function Experience() {
                   <p className="font-display font-bold text-ink">{cert.name}</p>
                   {cert.status === 'in-progress' && (
                     <span className="shrink-0 font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm"
-                      style={{ color: '#f59e0b', background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.3)' }}>
+                      style={{ color: '#9a6b2f', background: 'rgba(154,107,47,0.1)', border: '1px solid rgba(154,107,47,0.3)' }}>
                       In Progress
                     </span>
                   )}

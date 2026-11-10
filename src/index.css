@@ -4,157 +4,131 @@
 
 @layer base {
   :root {
-    --paper: #0b1728;
-    --ink:   #dbeafe;
-    --gold:  #38bdf8;
-    --navy:  #67e8f9;
-    --rule:  rgba(56,189,248,0.18);
+    --paper:  #f8f7f3;
+    --ink:    #252b2a;
+    --accent: #2e615a;
+    --navy:   #4a5578;
+    --rule:   #dcded8;
+    --pale:   #e9efeb;
   }
 
   html { scroll-behavior: smooth; }
 
   body {
-    @apply bg-paper text-ink font-serif overflow-x-hidden;
+    @apply bg-paper text-ink font-sans overflow-x-hidden;
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
   }
 
   * { box-sizing: border-box; }
 
-  ::selection { background: rgba(56,189,248,0.25); color: #dbeafe; }
+  ::selection { background: #d1e0d5; color: #252b2a; }
 
-  ::-webkit-scrollbar       { width: 5px; }
-  ::-webkit-scrollbar-track { background: #0b1728; }
-  ::-webkit-scrollbar-thumb { background: #163350; border-radius: 9999px; }
-  ::-webkit-scrollbar-thumb:hover { background: #38bdf8; }
+  ::-webkit-scrollbar       { width: 10px; }
+  ::-webkit-scrollbar-track { background: #f2f1ec; }
+  ::-webkit-scrollbar-thumb { background: #cfd3cb; border-radius: 9999px; border: 3px solid #f2f1ec; }
+  ::-webkit-scrollbar-thumb:hover { background: #a9b3ab; }
 
-  h1, h2, h3 { @apply font-display text-ink; }
+  h1, h2, h3 {
+    @apply font-display text-ink;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+  }
 }
 
 @layer components {
 
-  /* ── Blueprint card ─────────────────────────────── */
+  /* ── Paper entry — flat, rule-separated ─────────── */
   .paper-card {
-    @apply relative bg-paper-dark rounded-sm;
-    border: 1px solid rgba(56,189,248,0.18);
-    box-shadow: 0 4px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(56,189,248,0.06);
+    @apply relative bg-transparent;
+    border-top: 1px solid var(--rule);
   }
 
-  /* ── Section rule — blueprint dimension line ────── */
+  /* ── Section heading rule ───────────────────────── */
   .section-rule {
-    @apply flex items-center gap-4 my-10;
+    @apply flex items-center gap-4 mt-14 mb-6;
   }
-  .section-rule::before,
   .section-rule::after {
     content: '';
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(56,189,248,0.30), transparent);
+    background: var(--rule);
   }
 
-  /* ── Abstract / drawing title block ────────────── */
+  .section-heading {
+    @apply font-mono text-[10px] font-medium uppercase;
+    letter-spacing: 0.09em;
+    color: var(--accent);
+  }
+
+  /* ── Abstract block — open, no container ────────── */
   .abstract-box {
-    @apply rounded-sm p-6 md:p-8;
-    background: #0d1e38;
-    border: 1px solid rgba(56,189,248,0.25);
-    box-shadow: 0 0 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(56,189,248,0.08);
+    @apply pb-2;
   }
 
-  /* ── Equation box ──────────────────────────────── */
+  /* ── Equation box ───────────────────────────────── */
   .equation-box {
-    @apply font-mono text-sm rounded-sm px-4 py-3;
-    color: #67e8f9;
-    background: rgba(56,189,248,0.06);
-    border: 1px solid rgba(56,189,248,0.22);
-    box-shadow: 0 0 16px rgba(56,189,248,0.08);
+    @apply font-mono text-sm px-4 py-3;
+    color: #2b4f49;
+    background: var(--pale);
+    border-left: 2px solid var(--accent);
     letter-spacing: 0.02em;
   }
 
-  /* ── Tags ──────────────────────────────────────── */
+  /* ── Tags ───────────────────────────────────────── */
   .tag {
-    @apply text-xs font-mono px-2 py-0.5 rounded-sm border font-medium;
+    @apply font-mono px-2 py-[3px];
+    font-size: 9px;
+    letter-spacing: 0;
+    border-radius: 2px;
   }
-  .tag-gold    { @apply tag; color: #7dd3fc; border-color: rgba(56,189,248,0.30);  background: rgba(56,189,248,0.08); }
-  .tag-navy    { @apply tag; color: #a5f3fc; border-color: rgba(103,232,249,0.30); background: rgba(103,232,249,0.08); }
-  .tag-rust    { @apply tag; color: #a5b4fc; border-color: rgba(129,140,248,0.30); background: rgba(129,140,248,0.08); }
-  .tag-default { @apply tag; color: #7ea8c9; border-color: rgba(56,189,248,0.15);  background: rgba(56,189,248,0.05); }
+  .tag-gold    { @apply tag; color: #2e615a; background: #e4ece6; }
+  .tag-navy    { @apply tag; color: #404a68; background: #e5e7ee; }
+  .tag-rust    { @apply tag; color: #6d5334; background: #efe9e0; }
+  .tag-default { @apply tag; color: #435b51; background: var(--pale); }
 
-  /* ── Buttons ───────────────────────────────────── */
+  /* ── Buttons ────────────────────────────────────── */
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-sm font-mono font-semibold
-           transition-all duration-200;
-    color: #0b1728;
-    background: #38bdf8;
-    box-shadow: 0 0 20px rgba(56,189,248,0.25);
+    @apply inline-flex items-center gap-2 px-5 py-2.5 font-sans font-semibold text-xs
+           transition-colors duration-150;
+    color: #ffffff;
+    background: var(--accent);
+    border-radius: 2px;
   }
-  .btn-primary:hover  { background: #7dd3fc; box-shadow: 0 0 32px rgba(56,189,248,0.45); transform: translateY(-1px); }
-  .btn-primary:active { transform: translateY(0); }
+  .btn-primary:hover { background: #204941; }
 
   .btn-ghost {
-    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-sm font-mono font-semibold
-           transition-all duration-200;
-    color: #7ea8c9;
-    border: 1px solid rgba(56,189,248,0.25);
-    background: rgba(56,189,248,0.05);
+    @apply inline-flex items-center gap-2 px-5 py-2.5 font-sans font-semibold text-xs
+           transition-colors duration-150;
+    color: var(--accent);
+    border: 1px solid #a6b9af;
+    background: transparent;
+    border-radius: 2px;
   }
-  .btn-ghost:hover  { color: #38bdf8; border-color: rgba(56,189,248,0.55); box-shadow: 0 0 16px rgba(56,189,248,0.15); transform: translateY(-1px); }
-  .btn-ghost:active { transform: translateY(0); }
+  .btn-ghost:hover { background: var(--pale); border-color: var(--accent); }
 
-  /* ── Section heading — blueprint annotation ─────── */
-  .section-heading {
-    @apply font-mono text-xs font-bold uppercase tracking-widest;
-    color: #38bdf8;
-  }
-
-  /* ── Citation badge ────────────────────────────── */
+  /* ── Citation index ─────────────────────────────── */
   .cite-num {
-    @apply font-mono text-xs font-bold rounded-sm px-1.5 py-0.5 flex-shrink-0;
-    color: #38bdf8;
-    border: 1px solid rgba(56,189,248,0.35);
-    background: rgba(56,189,248,0.08);
+    @apply font-mono flex-shrink-0;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    background: transparent;
+    border: none;
+    padding: 0;
   }
 
-  /* ── Gradient text (cyan) ──────────────────────── */
-  .gradient-text-gold {
-    background: linear-gradient(90deg, #38bdf8, #67e8f9, #818cf8, #38bdf8);
-    background-size: 300% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientX 5s linear infinite;
+  /* ── Sidebar kicker ─────────────────────────────── */
+  .kicker {
+    @apply font-mono text-[10px] uppercase;
+    letter-spacing: 0.09em;
+    color: var(--accent);
   }
-}
 
-/* ── Cursor ring ──────────────────────────────────── */
-.cursor-ring {
-  position: fixed;
-  z-index: 9999;
-  pointer-events: none;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(56,189,248,0.6);
-  transition: width .18s ease, height .18s ease, opacity .2s ease, border-color .2s ease;
-  transform: translate(-50%,-50%);
-  will-change: transform;
-}
-.cursor-ring.grow {
-  width: 44px;
-  height: 44px;
-  border-color: rgba(103,232,249,0.7);
-  box-shadow: 0 0 12px rgba(56,189,248,0.3);
-}
-
-/* ── Burst dot ────────────────────────────────────── */
-.burst-dot {
-  position: fixed;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%,-50%);
+  .gradient-text-gold { color: var(--accent); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cursor-ring { display: none !important; }
-  .gradient-text-gold { animation: none !important; -webkit-text-fill-color: #38bdf8 !important; }
+  html { scroll-behavior: auto; }
 }

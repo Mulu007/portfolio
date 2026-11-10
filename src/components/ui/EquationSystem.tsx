@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+﻿import { useEffect, useRef } from 'react'
 import katex from 'katex'
 
 interface Row { label: string; latex: string }
@@ -30,13 +30,13 @@ export default function EquationSystem({ rows }: Props) {
           key={i}
           className="rounded-sm px-4 py-3"
           style={{
-            background: 'rgba(56,189,248,0.04)',
-            border:     '1px solid rgba(56,189,248,0.16)',
+            background: 'rgba(46,97,90,0.04)',
+            border:     '1px solid rgba(46,97,90,0.16)',
           }}
         >
           {/* Label */}
           <p className="font-mono text-[9px] uppercase tracking-widest mb-2"
-             style={{ color: 'rgba(56,189,248,0.55)' }}>
+             style={{ color: 'rgba(46,97,90,0.55)' }}>
             <KatexInline latex={row.label} />
           </p>
           {/* Equation */}

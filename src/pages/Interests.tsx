@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import { Trophy, Wrench } from 'lucide-react'
 import { skills, interests, competitions } from '../data/interests'
 import ScrollReveal from '../components/ui/ScrollReveal'
@@ -17,10 +17,10 @@ const pageVariants = {
 }
 
 const catMeta = {
-  lang:    { label: 'Languages',        accent: '#38bdf8' },
-  lib:     { label: 'Libraries',        accent: '#67e8f9' },
-  tool:    { label: 'Tools',            accent: '#818cf8' },
-  finance: { label: 'Finance Concepts', accent: '#a5f3fc' },
+  lang:    { label: 'Languages',        accent: '#2e615a' },
+  lib:     { label: 'Libraries',        accent: '#4a7c6f' },
+  tool:    { label: 'Tools',            accent: '#4a5578' },
+  finance: { label: 'Finance Concepts', accent: '#6b8f84' },
 }
 
 function SkillDots({ level, accent }: { level: number; accent: string }) {
@@ -31,7 +31,7 @@ function SkillDots({ level, accent }: { level: number; accent: string }) {
           key={i}
           className="w-2 h-2 rounded-full transition-all duration-300"
           style={{
-            background: i < level ? accent : 'rgba(56,189,248,0.12)',
+            background: i < level ? accent : 'rgba(46,97,90,0.12)',
             boxShadow:  i < level ? `0 0 5px ${accent}88` : 'none',
           }}
         />
@@ -48,8 +48,8 @@ export default function Interests() {
 
       {/* ── Header ──────────────────────────────────── */}
       <ScrollReveal>
-        <p className="font-mono text-xs text-ink-faint uppercase tracking-widest mb-2">§4</p>
-        <h1 className="font-display text-4xl font-bold text-ink mb-2">Skills & Interests</h1>
+        <p className="font-mono text-[10px] uppercase tracking-[0.09em] text-gold pt-20 mb-6">Beyond the thesis</p>
+        <h1 className="text-[clamp(30px,4vw,44px)] leading-[1.2] tracking-[-0.05em] mb-4">Skills &amp; Interests</h1>
         <p className="text-ink-muted leading-relaxed mb-10">
           Technical toolkit, reading list, competitions, and the life outside the terminal.
         </p>
@@ -129,7 +129,7 @@ export default function Interests() {
                     onError={e => {
                       /* fallback: hide broken image, show icon bg */
                       const el = e.currentTarget.parentElement!
-                      el.style.background = 'rgba(56,189,248,0.06)'
+                      el.style.background = 'rgba(46,97,90,0.06)'
                       e.currentTarget.style.display = 'none'
                     }}
                   />

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowUpRight, Code2, TrendingUp, Building2, User } from 'lucide-react'
 import { projects, categoryLabels, type ProjectCategory } from '../data/projects'
@@ -39,8 +39,8 @@ export default function Projects() {
 
       {/* Page header */}
       <ScrollReveal>
-        <p className="font-mono text-xs text-ink-faint uppercase tracking-widest mb-2">§2</p>
-        <h1 className="font-display text-4xl font-bold text-ink mb-2">Projects & Research</h1>
+        <p className="font-mono text-[10px] uppercase tracking-[0.09em] text-gold pt-20 mb-6">Selected work</p>
+        <h1 className="text-[clamp(30px,4vw,44px)] leading-[1.2] tracking-[-0.05em] mb-4">Projects &amp; Research</h1>
         <p className="text-ink-muted leading-relaxed mb-8">
           Here is some of the work I have done.
           Each project includes the core methodology, key results and a link to source code.
@@ -79,7 +79,7 @@ export default function Projects() {
         >
           {filtered.map((p, i) => (
             <ScrollReveal key={p.id} delay={i * 0.05}>
-              <PaperCard className="p-6" accent={p.featured ? '#38bdf8' : undefined}>
+              <PaperCard className="p-6" accent={p.featured ? '#2e615a' : undefined}>
                 <div className="flex items-start gap-4">
 
                   {/* Citation number */}
@@ -110,7 +110,7 @@ export default function Projects() {
                       <div className="flex flex-wrap gap-3 mt-2 mb-1">
                         {p.institution && (
                           <span className="flex items-center gap-1 font-mono text-xs"
-                            style={{ color: '#38bdf8' }}>
+                            style={{ color: '#2e615a' }}>
                             <Building2 size={11} /> {p.institution}
                           </span>
                         )}

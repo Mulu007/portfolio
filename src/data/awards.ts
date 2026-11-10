@@ -1,4 +1,4 @@
-export type AwardCategory = 'academic' | 'competition' | 'recognition' | 'leadership'
+﻿export type AwardCategory = 'academic' | 'competition' | 'recognition' | 'leadership'
 
 export interface Award {
   id: number
@@ -115,8 +115,8 @@ export const awards: Award[] = [
 ]
 
 export const categoryMeta: Record<AwardCategory, { label: string; color: string; tagClass: string }> = {
-  academic:    { label: 'Academic',    color: '#38bdf8', tagClass: 'tag-gold' },
-  competition: { label: 'Competition', color: '#67e8f9', tagClass: 'tag-navy' },
-  recognition: { label: 'Recognition', color: '#818cf8', tagClass: 'tag-rust' },
-  leadership:  { label: 'Leadership',  color: '#7dd3fc', tagClass: 'tag-default' },
+  academic:    { label: 'Academic',    color: '#2e615a', tagClass: 'tag-gold' },
+  competition: { label: 'Competition', color: '#4a7c6f', tagClass: 'tag-navy' },
+  recognition: { label: 'Recognition', color: '#4a5578', tagClass: 'tag-rust' },
+  leadership:  { label: 'Leadership',  color: '#5d9186', tagClass: 'tag-default' },
 }

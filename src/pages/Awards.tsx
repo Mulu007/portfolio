@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿import { motion } from 'framer-motion'
 import { Trophy, Star, BookOpen, Users, ArrowUpRight } from 'lucide-react'
 import { awards, categoryMeta, type AwardCategory } from '../data/awards'
 import ScrollReveal from '../components/ui/ScrollReveal'
@@ -22,8 +22,8 @@ export default function Awards() {
     <motion.div variants={pageVariants} initial="initial" animate="enter" exit="exit">
 
       <ScrollReveal>
-        <p className="font-mono text-xs text-ink-faint uppercase tracking-widest mb-2">§3</p>
-        <h1 className="font-display text-4xl font-bold text-ink mb-2">Awards & Recognition</h1>
+        <p className="font-mono text-[10px] uppercase tracking-[0.09em] text-gold pt-20 mb-6">Honors &amp; distinctions</p>
+        <h1 className="text-[clamp(30px,4vw,44px)] leading-[1.2] tracking-[-0.05em] mb-4">Awards &amp; Recognition</h1>
         <p className="text-ink-muted leading-relaxed mb-10">
           Academic honors, competition placements, scholarships and extracurricular recognition.
         </p>
@@ -34,10 +34,10 @@ export default function Awards() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-12">
           {(
             [
-              { label: 'Academic', count: awards.filter(a => a.category === 'academic').length,    color: '#38bdf8' },
-              { label: 'Competition', count: awards.filter(a => a.category === 'competition').length, color: '#67e8f9' },
-              { label: 'Recognition', count: awards.filter(a => a.category === 'recognition').length, color: '#818cf8' },
-              { label: 'Leadership', count: awards.filter(a => a.category === 'leadership').length,  color: '#7dd3fc' },
+              { label: 'Academic', count: awards.filter(a => a.category === 'academic').length,    color: '#2e615a' },
+              { label: 'Competition', count: awards.filter(a => a.category === 'competition').length, color: '#4a7c6f' },
+              { label: 'Recognition', count: awards.filter(a => a.category === 'recognition').length, color: '#4a5578' },
+              { label: 'Leadership', count: awards.filter(a => a.category === 'leadership').length,  color: '#5d9186' },
             ]
           ).map(stat => (
             <PaperCard key={stat.label} className="p-4 text-center" tilt={false} accent={stat.color}>
@@ -73,12 +73,12 @@ export default function Awards() {
                     {/* Gradient overlay */}
                     <div
                       className="absolute inset-0"
-                      style={{ background: 'linear-gradient(to bottom, transparent 20%, rgba(11,23,40,0.95) 100%)' }}
+                      style={{ background: 'linear-gradient(to bottom, transparent 20%, rgba(248,247,243,0.95) 100%)' }}
                     />
                     {/* Category tag on photo */}
                     <span
                       className="absolute top-3 right-3 font-mono text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-sm"
-                      style={{ color: meta.color, background: 'rgba(11,23,40,0.75)', border: `1px solid ${meta.color}40` }}
+                      style={{ color: meta.color, background: 'rgba(248,247,243,0.75)', border: `1px solid ${meta.color}40` }}
                     >
                       {meta.label}
                     </span>
@@ -145,7 +145,7 @@ export default function Awards() {
                       </div>
                     )}
 
-                    <div className="h-px my-2" style={{ background: 'rgba(56,189,248,0.10)' }} />
+                    <div className="h-px my-2" style={{ background: 'rgba(46,97,90,0.10)' }} />
 
                     <p className="text-ink-muted text-sm leading-relaxed">{award.description}</p>
                     {award.link && (
