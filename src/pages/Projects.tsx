@@ -168,7 +168,13 @@ export default function Projects() {
                           <a href={toSrc(p.demo)} target="_blank" rel="noopener noreferrer"
                              className="flex items-center gap-1 font-mono text-xs text-navy hover:text-navy-light transition-colors">
                             <ArrowUpRight size={13} />
-                            {p.demo.endsWith('.pdf') ? 'PDF' : 'Demo'}
+                            {p.demo.endsWith('.pdf') ? 'Paper' : 'Demo'}
+                          </a>
+                        )}
+                        {p.slides && (
+                          <a href={toSrc(p.slides)} target="_blank" rel="noopener noreferrer"
+                             className="flex items-center gap-1 font-mono text-xs text-navy hover:text-navy-light transition-colors">
+                            <ArrowUpRight size={13} /> Slides
                           </a>
                         )}
                         {p.pdf && (

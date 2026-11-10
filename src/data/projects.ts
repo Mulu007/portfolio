@@ -10,6 +10,7 @@ export interface Project {
   github?: string
   demo?: string
   pdf?: string
+  slides?: string
   category: ProjectCategory
   featured?: boolean
   ib?: boolean
@@ -23,26 +24,31 @@ export interface Project {
 export const projects: Project[] = [
 {
   id: 'stat-arb-oil-equities',
-  title: 'Statistical Arbitrage: Oil U.S. Equity Return Dynamics',
+  title: 'Latent Volatility Regimes in Oil–Equity Pairs',
   description:
-    'An independent study of the lead-lag relationship between crude oil and U.S. equity returns, laying the econometric groundwork for a pairs trading strategy. I collected and aligned daily WTI crude and U.S. equity price series, transformed both to log returns, and confirmed stationarity through Augmented Dickey-Fuller and KPSS testing. Optimal lag order was selected using AIC and BIC criteria before estimating a Vector Autoregression on the joint system. Granger causality tests and Impulse Response Functions quantify the direction and persistence of return spillovers between the two markets — establishing whether oil movements carry predictive information for equities, and over what horizon that information decays.',
-  tags: ['VAR', 'Time Series', 'Granger Causality', 'Impulse Response', 'Stationarity Testing', 'R'],
-  metric: { label: 'Status', value: 'In Progress' },
+    'An independent study of whether the spread between crude oil and U.S. energy equities moves through distinct latent volatility states, or whether apparent regime behaviour is simply an artefact of fat tails. I fit a two-state switching-variance hidden Markov model to every tested pair-year — 60 pairs per year across 21 years, 1,260 in total — rather than only to the pairs that survive cointegration screening, and benchmark it against one-state Gaussian, Student-t and i.i.d.-mixture alternatives. The EM routine is implemented in Rcpp and validated against depmixS4; the GARCH comparison is validated against tseries::garch. Trading performance is deliberately confined to an appendix: the question is about the statistical structure of the spread, not about a strategy.',
+  tags: ['Hidden Markov Models', 'Regime Switching', 'Volatility Modelling', 'Cointegration', 'Time Series', 'R', 'Rcpp'],
+  metric: { label: 'Pair-years modelled', value: '1,260' },
   demo: '/papers/main.pdf',
+  slides: '/papers/latent-regimes-presentation.pdf',
   github: 'https://github.com/Mulu007/pairs-trading',
   category: 'economics',
   findings: [
     {
-      label: 'Stationarity & Series Preparation',
-      text: 'Daily WTI crude and U.S. equity price series were aligned and converted to log returns, with ADF and KPSS tests jointly confirming the transformed series are I(0) — a precondition for valid VAR estimation.',
+      label: 'Regimes are real, not fat tails',
+      text: 'The switching-variance HMM attains the lowest BIC in 1,092 of 1,260 pair-years, beating the Student-t alternative in 87% of cases and the i.i.d. mixture in 94%. A likelihood-ratio test rejects the mixture in 98% — the two-state structure is not reproducible by a fat-tailed single-state model.',
     },
     {
-      label: 'Lag Selection & VAR Estimation',
-      text: 'AIC and BIC criteria informed optimal lag order, balancing model fit against degrees-of-freedom loss, before estimating the VAR on the joint oil-equity system.',
+      label: 'Regime geometry',
+      text: 'Volatile states carry roughly 2.3× the standard deviation of calm states, with calm spells averaging about 42 days against 11 for volatile ones. The share of pairs in the volatile state tracks sector realised volatility at a correlation of 0.68.',
     },
     {
-      label: 'Return Spillovers & Persistence',
-      text: 'Granger causality tests establish directional predictive relationships between the two markets, while Impulse Response Functions trace the magnitude and decay horizon of a shock in one series propagating into the other.',
+      label: 'Cointegration predicts neither regimes nor itself',
+      text: 'Regime properties are unrelated to formation-period cointegration strength, and formation cointegration does not persist out of sample — test-year rejection rates sit near 8% in every decile of formation strength, questioning the screening step that most pairs-trading work depends on.',
+    },
+    {
+      label: 'Forecasting: an honest loss',
+      text: 'Re-estimated monthly, the HMM beats both a constant-variance benchmark and a frozen HMM on QLIKE, but loses to GARCH (Diebold-Mariano t of 4.4) and to a rolling 60-day variance (2.4). The regime structure is descriptively real without being the best available volatility forecast.',
     },
   ],
 },
