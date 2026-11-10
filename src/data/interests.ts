@@ -64,30 +64,30 @@ export const books: Book[] = [
 ]
 
 export const interests: Interest[] = [
-  {
-    label: 'Running',
-    icon: '',
-    description: 'Long-distance running is my reset button. No music, no distractions, just the road and whatever problem I was pretending not to think about. Something about sustained physical discomfort at 6am builds the same tolerance you need when a position moves against you.',
-    image: '/interests/running.jpg',   // add your photo here
-  },
-  {
-    label: 'Checkers',
-    icon: '',
-    description: 'Most people learn checkers as children and forget it exists. I discovered it through Assassin\'s Creed IV: Black Flag. A pirate game accidentally gave me a strategy obsession',
-    image: 'https://i.ytimg.com/vi/aRizDiH-cuQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCeXDPefQDkv4uv02vX3oWvQAks0g',
-  },
-  {
-    label: 'Farming · 300 Chickens',
-    icon: '',
-    description: 'A farmer at heart. Daily feed schedules, mortality risk, supply chain logistics, margin optimization: it is essentially a small enterprise that occasionally tries to escape. Closer to a portfolio management problem than most people would expect.',
-    image: '/interests/farm.jpg',      // add your farm photo here
-  },
-  {
-    label: 'My Cats & Dog',
-    icon: '',
-    description: 'Three cats and one dog each with a completely distinct personality and zero interest in coordinating with each other. Genuinely the most useful behavioral economics case study I have access to - at least their incentives are transparent.',
-    image: '/interests/pets.jpg',      // add your pets photo here
-  },
+  // {
+  //   label: 'Running',
+  //   icon: '',
+  //   description: 'Long-distance running is my reset button. No music, no distractions, just the road and whatever problem I was pretending not to think about. Something about sustained physical discomfort at 6am builds the same tolerance you need when a position moves against you.',
+  //   image: '/interests/running.jpg',   // add your photo here
+  // },
+  // {
+  //   label: 'Checkers',
+  //   icon: '',
+  //   description: 'Most people learn checkers as children and forget it exists. I discovered it through Assassin\'s Creed IV: Black Flag. A pirate game accidentally gave me a strategy obsession',
+  //   image: 'https://i.ytimg.com/vi/aRizDiH-cuQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCeXDPefQDkv4uv02vX3oWvQAks0g',
+  // },
+  // {
+  //   label: 'Farming · 300 Chickens',
+  //   icon: '',
+  //   description: 'A farmer at heart. Daily feed schedules, mortality risk, supply chain logistics, margin optimization: it is essentially a small enterprise that occasionally tries to escape. Closer to a portfolio management problem than most people would expect.',
+  //   image: '/interests/farm.jpg',      // add your farm photo here
+  // },
+  // {
+  //   label: 'My Cats & Dog',
+  //   icon: '',
+  //   description: 'Three cats and one dog each with a completely distinct personality and zero interest in coordinating with each other. Genuinely the most useful behavioral economics case study I have access to - at least their incentives are transparent.',
+  //   image: '/interests/pets.jpg',      // add your pets photo here
+  // },
   // {
   //   label: 'Market Research',
   //   icon: '📊',

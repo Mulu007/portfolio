@@ -37,12 +37,12 @@ export interface Certification {
 export const education: Education[] = [
   {
     institution: 'Texas State University',
-    degree: 'B.A. Economics (Honors), Minor in Mathematics',
+    degree: 'B.S. Applied Mathematics (Honors), B.A. Economics',
     period: '2025 – Present',
     location: 'San Marcos, TX',
     logo: '/logos/txstate.png',
     details: [
-      'Relevant Coursework: Calculus , Principles of Micro and Macro Economics, Advanced Macroeconomics, Business Statistics, Physics (I & II) Financial Accounting, Managerial Accounting,',
+      'Relevant Coursework: Calculus(I, II, III); Applied Linear Algebra; Probability & Statistics; Intermediate Macroeconomics (Honors); Business Statistics; Physics (I & II); Financial Accounting; Managerial Accounting,',
     ],
   },
   {
