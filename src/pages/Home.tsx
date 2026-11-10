@@ -6,7 +6,8 @@ const KEYWORDS = [
   'VAR / SVAR',
   'Statistical Modelling',
   'Input–Output Analysis',
-  'Statistical Arbitrage',
+  'Hidden Markov Models',
+  'Regime Switching',
   'Market Analysis',
   'R',
   'Python (learning)',
@@ -17,6 +18,7 @@ const METHODS = [
   'Time series analysis',
   'Structural VAR',
   'Input–output analysis',
+  'Regime-switching models',
   'Cointegration',
 ]
 
@@ -51,12 +53,12 @@ export default function Home() {
         </h1>
 
         <p className="text-[15px] text-ink-muted mb-8">
-          B.A. Economics (Honors) <span aria-hidden="true">·</span> Minor in Mathematics
+          B.S. Applied Mathematics (Honors) <span aria-hidden="true">·</span> B.A. Economics
         </p>
 
         <p className="font-display text-[17px] leading-[1.9] max-w-[680px] mb-8">
-          I study how economic shocks move through industries and financial markets,
-          with interests in econometrics, time series, and quantitative finance.
+          I enjoy studying time series and financial markets.My research interests currently center on time-series econometrics 
+          and the empiritcal dynamics of financial markets.
         </p>
 
         <div className="flex flex-wrap items-center gap-6">
@@ -84,8 +86,8 @@ export default function Home() {
             <SectionTitle index="01">About</SectionTitle>
 
             <p className="text-ink-muted mb-4">
-              I am an Economics major and Mathematics minor who enjoys reading and applying
-              theoretical models to real world problems. As a research assistant under
+              I am an Applied Mathematics and Economics dual-degree undergraduate who enjoys bringing theoretical
+              models to life by trying my best to solve the infinite real world problems. As a research assistant under
               Dr. Anurag Deb, I am currently working on my honors thesis studying how industries
               with stronger <Term>oil linkage factors</Term> experience sharper upstream and
               downstream propagation of <Term>oil price shocks</Term>. The project draws on{' '}
@@ -95,8 +97,11 @@ export default function Home() {
             </p>
 
             <p className="text-ink-muted mb-4">
-              Independently, I am working on a <Term>statistical arbitrage</Term> paper examining{' '}
-              <Term>pairs trading dynamics</Term> between oil and U.S. equities.
+              Independently, I am studying <Term>latent volatility regimes</Term> in oil–equity
+              spreads. I fit two-state switching-variance <Term>hidden Markov models</Term> across
+              roughly 1,260 pair-years and benchmark them against Student-t and mixture
+              alternatives, testing whether calm and volatile states are a real feature of the
+              data rather than an artefact of fat tails.
             </p>
 
             <p className="text-ink-muted">
@@ -190,8 +195,8 @@ export default function Home() {
           <div className="pb-7 mb-7 lg:border-b" style={{ borderColor: 'var(--rule)' }}>
             <p className="kicker mb-4">Current focus</p>
             <p className="text-xs leading-[1.9] text-ink-muted">
-              Oil shock transmission across U.S. industries, and regime-dependent
-              statistical arbitrage.
+              Oil shock transmission across U.S. industries, and latent volatility
+              regimes in oil–equity spreads.
             </p>
           </div>
 
